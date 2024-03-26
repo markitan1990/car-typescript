@@ -1,0 +1,40 @@
+
+
+.uk-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calc-uk-card{
+    background-color: floralwhite;
+}
+.uk-input, .uk-select {
+    background-color: #555; /* Темный фон для полей ввода и выпадающих списков */
+    color: #ddd; /* Цвет текста для полей ввода и выпадающих списков */
+    border: none; /* Убираем границы */
+    margin-bottom: 10px; /* Отступ снизу для каждого поля */
+}
+
+.uk-input::placeholder {
+    color: #bbb; /* Цвет текста для placeholder */
+}
+
+.uk-input:focus, .uk-select:focus {
+    outline: none; /* Убираем контур при фокусе */
+    box-shadow: 0 0 0 2px #444; /* Тень при фокусе */
+}
+
+button {
+    background-color: #5C5C5C; /* Фон для кнопки */
+    color: white; /* Цвет текста для кнопки */
+    border: none; /* Убираем границы */
+    padding: 10px 20px; /* Внутренние отступы для кнопки */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s; /* Плавное изменение фона при наведении */
+}
+
+button:hover {
+    background-color: #777; /* Фон для кнопки при наведении */
+}

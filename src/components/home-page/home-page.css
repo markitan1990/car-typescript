@@ -1,0 +1,72 @@
+.home {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.home h1 {
+    color: white;
+    width: 40%;
+    font-style: bolt;
+    font-size: 4rem;
+    text-align: left;
+    /* padding-top: -200px; */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo2 {
+    margin-top: 120px;
+    width: 30%;
+}
+
+.home h2 {
+    color: white;
+    font-style: bolt;
+    text-align: right;
+    font-size: 3rem;
+    width: 40%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.roud {
+    background: url(../../assets/img/r2.jpg) center top repeat-y;
+    width: 100%;
+    background-size: contain;
+    height: 1000%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.bmw {
+    background: url(../../assets/img/2222.png);
+    transform: rotateZ(-90deg) translate(0%, -82%);
+    position: absolute;
+    background-position: center;
+    background-size: 100%;
+    top: -300px;
+    z-index: -1;
+    opacity: 1;
+    width: 350px;
+    height: 197px;
+    left: 50%;
+}
+
+.audi {
+    background: url(../../assets/img/1111.png);
+    transform: rotateZ(0deg) translate(-55%, 0%);
+    position: absolute;
+    background-position: center;
+    background-size: 100%;
+    top: -300px;
+    z-index: -1;
+    opacity: 0;
+    width: 237px;
+    height: 365px;
+    margin-left: 37px;
+    left: 50%;
+}
