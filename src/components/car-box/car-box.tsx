@@ -2,7 +2,7 @@ import axios from "axios";
 import { ButtonContactUs } from "../header/header";
 import "./car-box.css"
 import React, { useEffect, useState } from 'react';
-
+import { Image } from "../header/header";
 
 
 interface CarCards {
@@ -54,16 +54,14 @@ function Content2({ data }: { data: Card }) {
             <div className="content2">
                 <div key={data.index} className="content2">
                     <div className="car-img-card">
-                        <img
-                            className={img.images[0].link.split(".")[0]}
+                        <Image className={img.images[0].link.split(".")[0]}
                             src={`/img/${img.images[0].link}`}
-                            alt={img.images[0].link.split(".")[0]}
-                        />
+                            alt={img.images[0].link.split(".")[0]} />
                     </div>
                     <h3>{img.brand}</h3>
                     <p>Год - {img.car_year}</p>
                     <p>Цена - {img.cost}$</p>
-                    <ContactUsCard/>
+                    <ContactUsCard />
                 </div>
             </div>
         </>
