@@ -1,17 +1,17 @@
-import { Image } from "../header/header";
 import './home-page.css'
-import logo from "../../assets/static/logo.jpg"
+import { ButtonContactUs } from '../button/button'
 
 export function Home() {
     return (
         <>
             <div className="home">
-                <div>
-                    <h2>Из Германии, из Америки, из Китая, но лучше из Германии, так гемора меньше!</h2>
-                    <Image className="logo2" src={logo} alt="Главная" />
-                    <h1>Привезем любой драндулет!</h1>
-                    {/* <div className="bmw"></div>
-                <div className="audi"></div> */}
+                <div className='home-data'>
+                    <h1>Покупка и доставка  автомобилей</h1>
+                    <p>Поможем подобрать и купить авто из США, Европы,<br/> Южной Кореи и Китая на аукционе без<br/> посредников и переплат</p>
+                    <div className='home-button'>
+                        <ButtonContactUs value="Купить сейчас" className='btn-1'/>
+                        <ButtonContactUs value="Подробнее" />
+                    </div>
                 </div>
             </div>
         </>

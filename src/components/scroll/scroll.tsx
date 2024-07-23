@@ -7,102 +7,70 @@ import { Modal } from '../modal/modal';
 import './scroll.css';
 import Calculator from '../calc/calculator';
 import { AboutUs } from '../about-us/about-us';
+import { VideoPlayer } from '../util/video-player';
 
-interface VideoDurations {
-    [key: number]: number;
-}
 
 const Scroll: React.FC = () => {
-    const forwardVideoRef = useRef<HTMLVideoElement>(null);
-    const backwardVideoRef = useRef<HTMLVideoElement>(null);
     const [activeScreen, setActiveScreen] = useState<number>(0);
-    const [isPlayingBackward, setIsPlayingBackward] = useState<boolean>(false);
     const [scrollEnabled, setScrollEnabled] = useState<boolean>(true);
-    const [videoDurations, setVideoDurations] = useState<VideoDurations>({ 0: 2, 1: 2, 2: 2, 3: 1 });
 
-    // const playVideoForTime = async (videoRef: React.RefObject<HTMLVideoElement>, time: number) => {
-    //     if (videoRef.current) {
-    //         videoRef.current.play();
-    //         setTimeout(() => {
-    //             videoRef.current?.pause();
-    //         }, time * 1000);
-    //     }
-    // };
-    let a = 0;
     const handleWheel = (event: WheelEvent) => {
-        // if (!scrollEnabled) return;
-        // console.log( event.deltaY, activeScreen );
-        a = a+1;
-        // if (event.deltaY > 0) {
-        //     setIsPlayingBackward(false);
-        //     setActiveScreen(activeScreen >= 3 ? 3 : activeScreen + 1);
-        // } else if (event.deltaY < 0) {
-        //     setIsPlayingBackward(true);
-        //     setActiveScreen(activeScreen <= 0  ? 0 : activeScreen - 1);
-        // }
-        // setScrollEnabled(false);
-        // setTimeout(() => {
-        //     setScrollEnabled(true);
-        // }, 1000);
+        if (!scrollEnabled) return;
+        if (event.deltaY > 0 && activeScreen < 3) {
+            setActiveScreen((prevScreen) => prevScreen + 1);
+        } else if (event.deltaY < 0 && activeScreen > 0) {
+            setActiveScreen((prevScreen) => prevScreen - 1);
+        }
+        setScrollEnabled(false);
+        setTimeout(() => {
+            setScrollEnabled(true);
+        }, 1000);
     };
-    console.log(a);
-    // useEffect(() => {
-    //     const duration = videoDurations[activeScreen] ?? 2;
-    //     if (isPlayingBackward) {
-    //         playVideoForTime(backwardVideoRef, duration);
-    //     } else {
-    //         playVideoForTime(forwardVideoRef, duration);
-    //     }
-    // }, [activeScreen, isPlayingBackward, videoDurations]);
-
-    // useEffect(() => {
-    //     if (!scrollEnabled) {
-    //         setTimeout(() => {
-    //             setScrollEnabled(true);
-    //         }, 1000);
-    //     }
-    // }, [scrollEnabled]);
 
     useEffect(() => {
         window.addEventListener('wheel', handleWheel);
         return () => {
             window.removeEventListener('wheel', handleWheel);
         };
-    }, []);
+    }, [scrollEnabled, activeScreen]);
 
     return (
         <>
             <Modal />
             <LoginBox />
-            <div className="roud">
-                <video ref={forwardVideoRef} muted loop style={{ display: isPlayingBackward ? 'none' : 'block' }}>
-                    <source src="./video/video1.mp4" type="video/mp4" />
-                </video>
-                <video ref={backwardVideoRef} muted loop style={{ display: isPlayingBackward ? 'block' : 'none' }}>
-                    <source src="./video/video2.mp4" type="video/mp4" />
-                </video>
-            </div>
             <Header />
-            <div className="scrollable-screens-container">
+            {/* <div className="scrollable-screens-container">
                 <div className={`screen ${activeScreen === 0 ? 'active' : ''}`} >
+                    <div className="roud">
+                        <VideoPlayer src="./video/v1.mp4" startTime={0} endTime={2.1} index={0} activeScreen={activeScreen} />
+                    </div>
                     <Home />
                 </div>
                 <div className={`screen ${activeScreen === 1 ? 'active' : ''}`} >
+                    <div className="roud">
+                        <VideoPlayer src="./video/v2.mp4" startTime={0} endTime={2.1} index={1} activeScreen={activeScreen} />
+                    </div>
                     <CarBox />
                 </div>
                 <div className={`screen ${activeScreen === 2 ? 'active' : ''}`} >
-                    <Calculator />
+                    <div className="roud">
+                        <VideoPlayer src="./video/v5.mp4" startTime={0} endTime={2.1} index={2} activeScreen={activeScreen} />
+                    </div>
+                    <Calculator /> 
                 </div>
                 <div className={`screen ${activeScreen === 3 ? 'active' : ''}`} >
+                    <div className="roud">
+                        <VideoPlayer src="./video/v4.mp4" startTime={0} endTime={2.1} index={3} activeScreen={activeScreen} />
+                    </div>
                     <AboutUs />
                 </div>
             </div>
             <div className="navigation-panel">
-                <button className={`${activeScreen === 0 ? 'active' : ''}`} onClick={() => setActiveScreen(0)}>Экран 1</button>
-                <button className={`${activeScreen === 1 ? 'active' : ''}`} onClick={() => setActiveScreen(1)}>Экран 2</button>
-                <button className={`${activeScreen === 2 ? 'active' : ''}`} onClick={() => setActiveScreen(2)}>Экран 3</button>
-                <button className={`${activeScreen === 3 ? 'active' : ''}`} onClick={() => setActiveScreen(3)}>Экран 4</button>
-            </div>
+                <button className={`${activeScreen === 0 ? 'active' : ''}`} onClick={() => setActiveScreen(0)}>Главная</button>
+                <button className={`${activeScreen === 1 ? 'active' : ''}`} onClick={() => setActiveScreen(1)}>Автомобили</button>
+                <button className={`${activeScreen === 2 ? 'active' : ''}`} onClick={() => setActiveScreen(2)}>Калькулятор</button>
+                <button className={`${activeScreen === 3 ? 'active' : ''}`} onClick={() => setActiveScreen(3)}>О нас</button>
+            </div> */}
         </>
     );
 };

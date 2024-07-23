@@ -1,21 +1,113 @@
-.about-us{
+.about-us {
     width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: row; 
     justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.about-us h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    max-width: 420px;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    margin: 20px 0;
+    margin-left: -2px;
+}
+
+.picturies-about {
+    position: relative;
+}
+
+.about-us-img1 {
+    width: 531px;
+    height: 667px;
+    top: 121px;
+    left: 348px;
+    gap: 0px;
+    border-radius: 4px 0px 0px 0px;
+    opacity: 0px;
+}
+
+.about-us-img2 {
+    width: 401px;
+    height: 278px;
+    top: 438px;
+    left: 619px;
+    gap: 0px;
+    border-radius: 4px 0px 0px 0px;
+    border: 12px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+
+.text-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-bottom: 0;
+    margin-top: 75px;
+}
+
+.blue-text {
+    color: #2661E9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20.77px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    display: flex;
     align-items: center;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.75);
 }
-.about-us-img{
-    max-width: 500px;
-    width: 100%;
-    margin-right: 20px;
+
+.blue-text p {
+    margin: 0;
 }
-.slide{
-    max-width: 500px;
-    width: 100%;
-    margin-left: 20px; 
-    color: #fff;
+
+.blue-text div {
+    margin-left: 15px;
+    width: 116px;
+    height: 2px;
+    top: 192px;
+    left: 1382px;
+    gap: 0px;
+    opacity: 0px;
+    background-color: #2661E9;
+
+}
+
+.block-about h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27.2px;
+    text-align: left;
+    color: rgba(123, 133, 155, 0.85);
+    max-width: 400px;
+    margin-top: 0;
+    margin-bottom: 55px;
+}
+
+.block-about ul {
+    padding: 0;
+}
+
+.block-about ul li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23.8px;
+    text-align: left;
+    margin: 10px 0;
+    list-style-type: none;
+}
+
+.block-about ul li span {
+    margin-right: 15px;
 }

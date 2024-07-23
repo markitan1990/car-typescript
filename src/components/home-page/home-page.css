@@ -1,75 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .home {
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    text-align: center;
+    position: relative;
+    background-image: url('../../../public/img/first.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 145%;
+    height: 100vh;
+    /* Убедитесь, что высота body равна высоте экрана */
+    margin: 0;
+    /* Уберите отступы по умолчанию */
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.home-data {
+    width: 80%;
+}
+
+.home h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 76px;
+    font-weight: 700;
+    line-height: 92.64px;
+    text-align: left;
+    color: #fff;
+    max-width: 860px;
+    margin: 0;
+}
+
+.home p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.94px;
+    text-align: left;
+    color: #fff;
+    max-width: 480px;
+    margin: 30px 0;
+}
+
+
+
+/* Настройки кнопок */
+.btn-width {
+    width: 215px !important;
+}
+
+.btn-height {
+    height: 65px !important;
+}
+
+.bg-color {
+    background-color: #e9e9e9 !important;
+}
+
+.btn-0 {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.07px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 55px;
+    max-width: 215px;
+    border: 2px solid currentColor;
+    padding: 0 30px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease-in-out;
+}
+
+@media (min-width: 600px) {
+    .wrap {
+        width: 100%;
+        float: left;
+    }
+}
+
+.btn-0:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #2661E9;
+    transform: translateX(-101%);
+    transition: 0.4s ease-in-out;
+}
+
+.btn-0:hover {
+    color: #ffffff;
+}
+
+.btn-0:hover:before {
+    transition: 0.4s ease-in-out;
+    transform: translateX(0);
+}
+
+.btn-0 {
+    color: #fff;
+}
+
+.home-button {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
-.home div{
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.home h1 {
-    color: white;
-    width: 30%;
-    font-style: bolt;
-    font-size: 3rem;
-    text-align: left;
-    /* padding-top: -200px; */
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 500px;
+    z-index: 1;
 }
 
-.logo2 {
-    margin-top: 120px;
-    width: 30%;
+.btn-1 {
+    background-color: #fff;
+    border-color: #fff;
+    color: #2661E9;
+    z-index: 2;
+    margin-right: 40px;
 }
 
-.home h2 {
-    color: white;
-    font-style: bolt;
-    text-align: right;
-    font-size: 2rem;
-    width: 30%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.roud {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
-.bmw {
-    background: url(../../assets/img/2222.png);
-    transform: rotateZ(-90deg) translate(0%, -82%);
+.btn-1:before {
+    content: '';
     position: absolute;
-    background-position: center;
-    background-size: 100%;
-    top: -300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: -1;
-    opacity: 1;
-    width: 350px;
-    height: 197px;
-    left: 50%;
+    background-color: #2661E9;
+    transform: translateX(-101%);
+    transition: 0.4s ease-in-out;
+}
+.btn-1:hover:before {
+    transition: 0.4s ease-in-out;
+    transform: translateX(0);
 }
 
-.audi {
-    background: url(../../assets/img/1111.png);
-    transform: rotateZ(0deg) translate(-55%, 0%);
-    position: absolute;
-    background-position: center;
-    background-size: 100%;
-    top: -300px;
-    z-index: -1;
-    opacity: 0;
-    width: 237px;
-    height: 365px;
-    margin-left: 37px;
-    left: 50%;
+.btn-1:hover {
+    color: #fff;
+}
+
+.home-button .btn-0{
+    font-size: 18px;
 }
