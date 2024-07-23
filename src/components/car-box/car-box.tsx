@@ -1,5 +1,4 @@
 import axios from "axios";
-import { ButtonContactUs } from "../button/button";
 import "./car-box.css"
 import React, { useEffect, useState } from 'react';
 import { Image } from "../header/header";
@@ -46,16 +45,6 @@ function CarBoxText() {
         </>
     );
 }
-
-// function ContactUsCard() {
-//     return (
-//         <>
-//             <div className="contact_us contact_us_card">
-//                 <ButtonContactUs value="Заказать звонок" />
-//             </div>
-//         </>
-//     );
-// }
 
 function Content2({ data }: { data: Card }) {
     const car_data = data.carCards
@@ -121,7 +110,7 @@ function Content2({ data }: { data: Card }) {
     );
 }
 
-function Card({ data }: { data: Card }) {
+function CardBox({ data }: { data: Card }) {
     return (
         <>
             <div className="card">
@@ -155,7 +144,7 @@ function Container2() {
     return (
         <div className="container2">
             {data?.map((carData, index) => (
-                <Card key={index} data={{ index: index, carCards: carData }} />
+                <CardBox key={index} data={{ index: index, carCards: carData }} />
             ))}
         </div>
     );

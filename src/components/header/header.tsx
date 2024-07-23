@@ -38,7 +38,7 @@ export function Image({ className, src, alt }: LogoProps) {
 }
 
 function BtnFlip({ value }: { value: string }) {
-    return <a href="#" className="btn-flip" data-back={value} data-front={value}>{value}</a>;
+    return <a href="http://localhost:3000/" className="btn-flip" data-back={value} data-front={value}>{value}</a>;
 }
 
 function Navigate() {
