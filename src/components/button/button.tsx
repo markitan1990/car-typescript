@@ -8,8 +8,10 @@ interface ButtonContactUsProps {
   
   export function ButtonContactUs({ value, className }: ButtonContactUsProps) {
     return (
-      <a className={`btn-0 ${className}`} href="#" onClick={() => ToggleClassActive(["modal", "login-box"])}>
+      <button className={`btn-0 ${className}`} onClick={() => ToggleClassActive(["modal", "login-box"])}>
         {value}
-      </a>
+      </button>
     );
   }
+
+   
