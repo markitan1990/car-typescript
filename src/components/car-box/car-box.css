@@ -1,171 +1,211 @@
-.car-box {
-    background-color: rgba(0, 0, 0, 0.75);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-}
-
 .car-box-text {
-    margin-top: 70px;
     display: flex;
     width: 100%;
-}
-
-.car-box-text div {
-    color: #fff;
-}
-
-.car-box-text div:first-child {
-    font-size: 3rem;
-    width: 50%;
-    text-align: right;
-    margin-right: 5px;
-    font-weight: bold;
-    transition: .4;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.car-box-text div:last-child {
-    font-size: 3rem;
-    width: 50%;
-    text-align: left;
-    margin-left: 5px;
-    font-weight: bold;
-    transition: .4;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.contact_us.contact_us_card {
     flex-direction: column;
-    margin: 30px 0;
-}
-
-.cards-cars .container2 {
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    /* margin: 40px 0; */
+    margin: 70px 0 50px 0;
 }
 
-.cards-cars .container2 .card {
-    position: relative;
-    min-width: 320px;
-    height: 440px;
-    box-shadow: inset 5px 5px 5px rgba(255, 255, 255, 0.39),
-        inset -5px -5px 15px rgba(255, 255, 255, 0.75),
-        5px 5px 15px rgba(255, 255, 255, 0.28),
-        -5px -5px 15px rgba(255, 255, 255, 0.23);
-    margin: 30px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.cards-cars .container2 .card:nth-child(1) .box .content2 a {
-    background: #2196f3;
-}
-
-.cards-cars .container2 .card:nth-child(2) .box .content2 a {
-    background: #e91e63;
-}
-
-.cards-cars .container2 .card:nth-child(3) .box .content2 a {
-    background: #23c186;
-}
-
-.cards-cars .container2 .card .box {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background: #2a2b2f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: 0.5s;
-    box-shadow: 0px 0px 8px 0px rgb(255, 255, 255);
-}
-
-.cards-cars .container2 .card:hover>.box {
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    cursor: pointer;
-}
-
-.cards-cars .container2 .card .box:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.cards-cars .container2 .card .box .content2 {
+.car-box-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20.77px;
+    letter-spacing: -0.04em;
     text-align: center;
+    color: rgba(38, 97, 233, 1);
+    margin: 0;
 }
 
-.cards-cars .container2 .card .box .content2 h2 {
-    position: absolute;
-    top: -10px;
-    right: 30px;
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.1);
+.car-box-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 57.6px;
+    text-align: center;
+    color: rgba(38, 44, 72, 1);
+    margin: 10px 0;
 }
 
-.cards-cars .container2 .card .box .content2 h3 {
-    font-size: 1.8rem;
-    color: #fff;
-    z-index: 1;
-    transition: 0.5s;
-    margin-bottom: 15px;
+.car-box-text h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27.2px;
+    text-align: center;
+    color: rgba(123, 133, 155, 0.85);
+    margin: 0;
+    max-width: 850px;
 }
 
-.cards-cars .container2 .card .box .content2 p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    z-index: 1;
-    transition: 0.5s;
-}
-
-.cards-cars .container2 .card .box .content2 a {
-    position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    background: black;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    margin-top: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
-}
-
-.cards-cars .container2 .card .box .content2 a:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-    background: #fff;
-    cursor: pointer;
-    color: #000;
-}
-
-.content2 .car-img-card {
+.content2 {
     width: 100%;
-    height: 200px;
+    max-width: 400px;
     overflow: hidden;
+    border: 1px solid rgba(232, 232, 232, 1);
+    margin: 30px;
+}
+
+.car-img-card {
+    position: relative;
+    width: 100%;
+    height: 292px;
+    overflow: hidden;
+}
+
+.car-img-card img {
+    width: 100%;
+    transition: all ease 1.5s;
+}
+
+.cards-cars {
+    display: flex;
+    justify-content: center;
+}
+
+.condition {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 64px;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.88px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.engine {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 55px;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.88px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    background: #2661E9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cost {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30.55px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    text-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    color: white;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.brand-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 20px 5px 20px;
+}
+
+.brand-box div {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.88px;
+    letter-spacing: -0.04em;
+    text-align: left;
     display: flex;
     align-items: center;
 }
 
-.content2 .car-img-card img {
-    width: 100%;
+
+.brand-box img {
+    width: 34px;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25.5px;
+    text-align: left;
+    color: rgba(123, 133, 155, 0.85);
+    margin: 0 20px;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.space-line {
+    width: 90%;
+    height: 1px;
+    background: rgba(232, 232, 232, 1);
+    margin: 20px auto;
+}
+
+.data-box {
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px 25px 20px;
+}
+
+.data-box div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.29px;
+    margin-right: 25px;
+    color: rgba(123, 133, 155, 0.85);
+
+}
+
+.data-box div svg {
+    margin-right: 7px;
+}
+
+.container2 {
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-cars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content2:hover {
+    cursor: pointer;
+}
+
+.content2:hover>.car-img-card>img {
+    transform: scale(1.1);
+    transition: all ease 1.5s;
 }
