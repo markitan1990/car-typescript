@@ -1,4 +1,4 @@
-name: Deploy Frontend
+name: Deploy to Server
 
 on:
   push:
@@ -6,15 +6,15 @@ on:
       - master
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4  # Обновлено до v4
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
     - name: Set up Node.js
-      uses: actions/setup-node@v4  # Обновлено до v4
+      uses: actions/setup-node@v2
       with:
         node-version: '20'
 
@@ -24,11 +24,17 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Deploy via FTP
-      uses: sebastianpopp/ftp-action@v1.1.0
-      with:
-        host: ${{ secrets.FTP_HOST }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: build
-        remoteDir: /api
+    - name: Deploy to server
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
+        scp -r ./build/* $SERVER_USER@$SERVER_IP:$DEPLOY_PATH
+        ssh $SERVER_USER@$SERVER_IP "sudo systemctl restart nginx"
