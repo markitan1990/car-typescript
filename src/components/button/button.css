@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.4s ease-in-out;
+    background-color: transparent;
 }
 
 @media (min-width: 600px) {
@@ -55,6 +56,7 @@
 
 .btn-0:hover {
     color: #ffffff;
+    cursor: pointer;
 }
 
 .btn-0:hover:before {
