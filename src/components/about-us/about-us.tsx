@@ -50,7 +50,6 @@ function AboutUsText() {
                 </div>
             </div>
         </>
-
     );
 }
 
