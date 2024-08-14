@@ -1,5 +1,5 @@
 import { ToggleClassActive } from '../util';
-import './button.css'
+import s from './button.module.scss'
 
 interface ButtonContactUsProps {
     value: string;
@@ -8,7 +8,7 @@ interface ButtonContactUsProps {
   
   export function ButtonContactUs({ value, className }: ButtonContactUsProps) {
     return (
-      <button className={`btn-0 ${className}`} onClick={() => ToggleClassActive(["modal", "login-box"])}>
+      <button className={`${s.btn_0} ${className}`} onClick={() => ToggleClassActive(["modal", "login-box"])}>
         {value}
       </button>
     );
