@@ -10,19 +10,19 @@
     }
 }
 
-.screen.active .uk-card {
+.screen.active .uk_card {
     animation-name: ukCard;
     animation-duration: 1.3s;
     animation-delay: 1.5s;
     animation-fill-mode: both;
 }
-.screen.active .uk-resul-block {
+.screen.active .uk_resul_block {
     animation-name: ukCard;
     animation-duration: 1.3s;
     animation-delay: 1.5s;
     animation-fill-mode: both;
 }
-.uk-card {
+.uk_card {
     position: relative;
     z-index: 6 ;
     width: 50%;
@@ -34,26 +34,26 @@
 
 }
 
-.calc-uk-card {
+.calc_uk_card {
     background-color: rgba(0, 0, 0, 0.879);
     padding: 30px;
     margin-top: 30px;
 }
 
-.uk-input,
-.uk-select {
+.uk_input,
+.uk_select {
     background-color: #555; 
     color: #ffffff; 
     border: none; 
     margin-bottom: 10px; 
 }
 
-.uk-input::placeholder {
+.uk_input::placeholder {
     color: #ffffff; 
 }
 
-.uk-input:focus,
-.uk-select:focus {
+.uk_input:focus,
+.uk_select:focus {
     outline: none; 
     box-shadow: 0 0 0 2px #ffffff; 
 }
@@ -71,7 +71,7 @@ button:hover {
     background-color: #fffcfc; 
 }
 
-.uk-form-stacked {
+.uk_form_stacked {
     display: block;
     position: relative;
     margin: 40px auto;
@@ -84,7 +84,7 @@ h2 {
     color: #AAAAAA;
 }
 
-.uk-form-stacked ul {
+.uk_form_stacked ul {
     list-style: none;
     margin: 15px 0;
     padding: 0;
@@ -110,7 +110,7 @@ ul li label {
     -webkit-transition: all 0.25s linear;
 }
 
-.uk-form-label {
+.uk_form_label {
     margin-bottom: 5px;
     color: #ffffff;
 }
@@ -163,8 +163,8 @@ input[type=radio]:checked~label {
     color: #12c912;
 }
 
-.calc-section {
-    max-width: 1200;
+.calc_section {
+    max-width: 1200px;
     height: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -172,22 +172,22 @@ input[type=radio]:checked~label {
     justify-content: flex-start; 
 }
 
-.block-input .uk-form-label {
+.block_input .uk_form_label {
     margin-right: 15px;
 }
-.calc-RB-info{
+.calc_RB_info{
     color: white; 
     width: 60%;
     margin-left: 100px;
 }
-.result-block{
+.result_block{
     background-color: rgba(255, 255, 255, 0.828);
     padding: 30px;
     padding-right: 80px;
     margin-right: -45px;
     height: 70%;
 }
-.uk-resul-block{
+.uk_resul_block{
     height: 100%;
     display: flex;
     align-items: center;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "./calc.css"
+import s from "./calc.module.scss"
 
 interface RadioData {
     checked: string;
@@ -10,7 +10,7 @@ interface RadioData {
 function RadioEngine({ checked, onChange }: RadioData) {
     return (
         <ul>
-            <div className="uk-form-label">Тип двигателя</div>
+            <div className={s.uk_form_label}>Тип двигателя</div>
             <li>
                 <input
                     id="f-option"
@@ -79,7 +79,7 @@ function Price({ checked, onChange }: RadioData) {
             </label>
             <input
                 placeholder="в евро"
-                className="uk-input"
+                className={s.uk_input}
                 type="number"
                 min="1"
                 name="price"
@@ -158,18 +158,20 @@ const Calculator: React.FC = () => {
         }
     };
 
+
+
     return (
         <>
-            <section className='calc-section'>
-                <div className="uk-card">
-                    <div className='calc-uk-card'>
+            <section className={s.calc_section}>
+                <div className={s.uk_card}>
+                    <div className={s.calc_uk_card}>
                         <h2 className="uk-text-center">Калькулятор на 2024 год</h2>
-                        <form className="uk-form-stacked" onSubmit={handleSubmit}>
-                            <div className='block-input'>
+                        <form className={s.uk_form_stacked} onSubmit={handleSubmit}>
+                            <div className={s.block_input}>
                                 <label className="uk-form-label" htmlFor="year">
                                     Возраст авто
                                 </label>
-                                <select className="uk-select" name="year" value={formData.year} onChange={handleChange}>
+                                <select className={s.uk_select} name="year" value={formData.year} onChange={handleChange}>
                                     <option value="0">менее 3-х лет</option>
                                     <option value="1">от 3-х до 5 лет</option>
                                     <option value="2">более 5 лет</option>
@@ -198,7 +200,7 @@ const Calculator: React.FC = () => {
                             {formData.engine === "0" && (
                                 <>
                                     <div className="uk-form-label">Объем, см³</div><input
-                                        className="uk-input "
+                                        className={s.uk_input}
                                         type="number"
                                         min="1"
                                         name="volume"
@@ -233,16 +235,16 @@ const Calculator: React.FC = () => {
                             </div>
                         </form>
                     </div>
-                    <div className='calc-RB-info'>
+                    <div className={s.calc_RB_info}>
                         <h4>Примечания:</h4>
                         <p>При итоговой калькуляции всех затрат применялся курс, установленный НБРБ на 03.27.2024 1 EUR = 2.9156 BYN и 1 USD = 2.7364 BYN.</p>
                         <p>Результаты расчетов в иностранных валютах указаны справочно, оплата производится в белорусских рублях по курсу НБ РБ на день оплаты.</p>
                     </div>
                 </div>
-                <div className='uk-resul-block'> 
+                <div className={s.uk_resul_block}>
                     {data === "Очень много платить придется я вам отвечаю" ? ( 
                         <> 
-                            <div className='result-block'>
+                            <div className={s.result_block}>
                                 <h2>Результат расчета</h2>
                                 <h3>РАСТАМОЖКА АВТО В БЕЛАРУСИ</h3>
                                 <div className='result-table'>
@@ -270,7 +272,7 @@ const Calculator: React.FC = () => {
                             </div>
                         </>
                     ) : (
-                        <div className='result-block'>
+                        <div className={s.result_block}>
                             <h2>Таможенный калькулятор авто</h2>
                             <h3>РАСТАМОЖКА АВТО В БЕЛАРУСИ</h3>
                             <div>
