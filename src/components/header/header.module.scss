@@ -31,7 +31,7 @@ body {
   align-items: center;
 }
 
-.navigate .btn-flip {
+.navigate .btn_flip {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -47,13 +47,13 @@ body {
   animation-duration: 100ms;
 }
 
-.navigate .btn-flip:hover {
+.navigate .btn_flip:hover {
   cursor: pointer;
   transition: 0.5s ease;
   border-bottom: 1px solid #2661E9;
 }
 
-.logo-nav {
+.logo_nav {
   display: flex;
   height: 100%;
   width: 80%;
@@ -75,13 +75,13 @@ body {
   justify-content: center;
 }
 
-.question-info {
+.question_info {
   display: flex;
   color: #fff;
   flex-direction: column;
 }
 
-.question-info p {
+.question_info p {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -92,7 +92,7 @@ body {
   margin: 0 0 10px 0;
 }
 
-.question-info a {
+.question_info a {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -104,12 +104,12 @@ body {
   white-space: nowrap;
 }
 
-.question-info a:hover {
+.question_info a:hover {
   transition: 0.4s;
   color: #2661E9;
 }
 
-.vectorphone {
+.vector_phone {
   margin: 0 25px;
 }
 
