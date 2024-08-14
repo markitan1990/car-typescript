@@ -1,4 +1,4 @@
-.car-box-text {
+.car_box_text {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -7,7 +7,7 @@
     margin: 70px 0 50px 0;
 }
 
-.car-box-text h4 {
+.car_box_text h4 {
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     font-weight: 600;
@@ -18,7 +18,7 @@
     margin: 0;
 }
 
-.car-box-text h3 {
+.car_box_text h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     font-weight: 700;
@@ -28,7 +28,7 @@
     margin: 10px 0;
 }
 
-.car-box-text h5 {
+.car_box_text h5 {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -47,19 +47,19 @@
     margin: 30px;
 }
 
-.car-img-card {
+.car_img_card {
     position: relative;
     width: 100%;
     height: 292px;
     overflow: hidden;
 }
 
-.car-img-card img {
+.car_img_card img {
     width: 100%;
     transition: all ease 1.5s;
 }
 
-.cards-cars {
+.cards_cars {
     display: flex;
     justify-content: center;
 }
@@ -114,20 +114,20 @@
     color: white;
 }
 
-.info-box {
+.info_box {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.brand-box {
+.brand_box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 20px 20px 5px 20px;
 }
 
-.brand-box div {
+.brand_box div {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 600;
@@ -139,7 +139,7 @@
 }
 
 
-.brand-box img {
+.brand_box img {
     width: 34px;
 }
 
@@ -157,20 +157,20 @@
     text-overflow: ellipsis;
 }
 
-.space-line {
+.space_line {
     width: 90%;
     height: 1px;
     background: rgba(232, 232, 232, 1);
     margin: 20px auto;
 }
 
-.data-box {
+.data_box {
     display: flex;
     flex-direction: row;
     margin: 0 20px 25px 20px;
 }
 
-.data-box div {
+.data_box div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -183,7 +183,7 @@
 
 }
 
-.data-box div svg {
+.data_box div svg {
     margin-right: 7px;
 }
 
@@ -195,7 +195,7 @@
     align-items: center;
 }
 
-.cards-cars {
+.cards_cars {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +205,7 @@
     cursor: pointer;
 }
 
-.content2:hover>.car-img-card>img {
+.content2:hover>.car_img_card>img {
     transform: scale(1.1);
     transition: all ease 1.5s;
 }

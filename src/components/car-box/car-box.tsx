@@ -1,5 +1,5 @@
 import axios from "axios";
-import "./car-box.css"
+import s from "./car-box.module.scss"
 import React, { useEffect, useState } from 'react';
 import { Image } from "../header/header";
 
@@ -37,7 +37,7 @@ interface Card {
 function CarBoxText() {
     return (
         <>
-            <div className="car-box-text">
+            <div className={s.car_box_text}>
                 <h4>Посмотрите наши автомобили в наличии</h4>
                 <h3>Лучшие Автомобили На Рынке</h3>
                 <h5>Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто к месту назначения, но и полное документальное сопровождение сделки и прозрачное ценообразование.</h5>
@@ -59,19 +59,19 @@ function Content2({ data }: { data: Card }) {
 
     return (
         <>
-            <div key={data.index} className="content2">
-                <div className="car-img-card">
+            <div key={data.index} className={s.content2}>
+                <div className={s.car_img_card}>
                     <Image className={car_data.images[0].link.split(".")[0]}
                         src={`/img/${car_data.images[0].link}`}
                         alt={car_data.images[0].link.split(".")[0]} />
-                    <div className="condition" style={getConditionStyle(car_data.car_condition)}>
+                    <div className={s.condition} style={getConditionStyle(car_data.car_condition)}>
                         {car_data.car_condition}
                     </div>
-                    <div className="engine">{car_data.car_engine} л</div>
-                    <div className="cost">$ {formatNumber(car_data.cost)}</div>
+                    <div className={s.engine}>{car_data.car_engine} л</div>
+                    <div className={s.cost}>$ {formatNumber(car_data.cost)}</div>
                 </div>
-                <div className="info-box">
-                    <div className="brand-box">
+                <div className={s.info_box}>
+                    <div className={s.brand_box}>
                         <div>
                             {car_data.car_year + "  "}
                             {car_data.brand.car_name}
@@ -80,12 +80,12 @@ function Content2({ data }: { data: Card }) {
                             src={`/img/brand/${car_data.brand.link}`}
                             alt={car_data.brand.link.split(".")[0]} />
                     </div>
-                    <div className="description">
+                    <div className={s.description}>
                         {car_data.description}
                     </div>
-                    <div className="space-line"></div>
+                    <div className={s.space_line}></div>
                 </div>
-                <div className="data-box">
+                <div className={s.data_box}>
                     <div>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.25 14.25H3.75V6H14.25M12 0.75V2.25H6V0.75H4.5V2.25H3.75C2.9175 2.25 2.25 2.9175 2.25 3.75V14.25C2.25 14.6478 2.40804 15.0294 2.68934 15.3107C2.97064 15.592 3.35218 15.75 3.75 15.75H14.25C14.6478 15.75 15.0294 15.592 15.3107 15.3107C15.592 15.0294 15.75 14.6478 15.75 14.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H13.5V0.75M12.75 9H9V12.75H12.75V9Z" fill="#393939" />
@@ -131,7 +131,7 @@ function Container2() {
         try {
             const response = await axios.get("http://localhost:8080/api/car-cards");
             const carCards: CarCards[] = response.data;
-
+            console.log(response)
             const shuffled = carCards.sort(() => 0.5 - Math.random());
             const selected = shuffled.slice(0, 6);
 
@@ -142,7 +142,7 @@ function Container2() {
     }
 
     return (
-        <div className="container2">
+        <div className={s.container2}>
             {data?.map((carData, index) => (
                 <CardBox key={index} data={{ index: index, carCards: carData }} />
             ))}
@@ -151,13 +151,13 @@ function Container2() {
 }
 
 function CardsCars() {
-    return <div className="cards-cars"><Container2 /></div>
+    return <div className={s.cards_cars}><Container2 /></div>
 }
 
 export function CarBox() {
     return (
         <>
-            <div className="car-box">
+            <div className={s.car_box}>
                 <CarBoxText />
                 <CardsCars />
             </div>
