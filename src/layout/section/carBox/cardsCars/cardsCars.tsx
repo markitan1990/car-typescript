@@ -4,7 +4,7 @@ import {CardCar} from "../cardCar";
 import s from "../carBox.module.scss";
 
 type Props = {
-    data: CarCardsType[]
+    data?: CarCardsType[]
 }
 export const CardsCars = ({data}: Props) => {
     return (
