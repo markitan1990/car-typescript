@@ -1,4 +1,6 @@
-export const testData = [
+import {CarCardsType} from "./types";
+
+export const testData: CarCardsType[] = [
     {
         id: 1,
         owner: "Mark",

@@ -35,7 +35,7 @@ export const CarBox = () => {
                     <h5>Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто к месту
                         назначения, но и полное документальное сопровождение сделки и прозрачное ценообразование.</h5>
                 </div>
-                <div className={s.cards_cars}><CardsCars data={testData}/></div>
+                <div className={s.cards_cars}><CardsCars data={data}/></div>
             </div>
         </>
     );
