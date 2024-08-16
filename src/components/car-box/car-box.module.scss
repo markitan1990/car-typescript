@@ -8,33 +8,30 @@
 }
 
 .car_box_text h4 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     font-weight: 600;
     line-height: 20.77px;
     letter-spacing: -0.04em;
     text-align: center;
-    color: rgba(38, 97, 233, 1);
+    color: var(--primary-200);
     margin: 0;
 }
 
 .car_box_text h3 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     font-weight: 700;
     line-height: 57.6px;
     text-align: center;
-    color: rgba(38, 44, 72, 1);
+    color: var(--primary-800);
     margin: 10px 0;
 }
 
 .car_box_text h5 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 27.2px;
     text-align: center;
-    color: rgba(123, 133, 155, 0.85);
+    color: var(--dark-100);
     margin: 0;
     max-width: 850px;
 }
@@ -43,7 +40,7 @@
     width: 100%;
     max-width: 400px;
     overflow: hidden;
-    border: 1px solid rgba(232, 232, 232, 1);
+    border: 1px solid var(--light-400);
     margin: 30px;
 }
 
@@ -70,7 +67,6 @@
     left: 14px;
     width: 64px;
     height: 30px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 500;
     line-height: 15.88px;
@@ -87,31 +83,29 @@
     right: 14px;
     width: 55px;
     height: 30px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 500;
     line-height: 15.88px;
     letter-spacing: -0.04em;
     text-align: left;
-    background: #2661E9;
-    color: white;
+    background: var(--primary-200);
+    color: var(--light-100);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .cost {
-    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     font-weight: 600;
     line-height: 30.55px;
     letter-spacing: -0.04em;
     text-align: left;
-    text-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     bottom: 14px;
     left: 14px;
-    color: white;
+    color: var(--light-100);
 }
 
 .info_box {
@@ -128,7 +122,6 @@
 }
 
 .brand_box div {
-    font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 26.88px;
@@ -144,12 +137,11 @@
 }
 
 .description {
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
     line-height: 25.5px;
     text-align: left;
-    color: rgba(123, 133, 155, 0.85);
+    color: var(--dark-100);
     margin: 0 20px;
     width: 90%;
     white-space: nowrap;
@@ -160,7 +152,7 @@
 .space_line {
     width: 90%;
     height: 1px;
-    background: rgba(232, 232, 232, 1);
+    background: var(--light-400);
     margin: 20px auto;
 }
 
@@ -174,12 +166,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
     line-height: 18.29px;
     margin-right: 25px;
-    color: rgba(123, 133, 155, 0.85);
+    color: var(--dark-100);
 
 }
 

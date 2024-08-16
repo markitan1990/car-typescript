@@ -1,6 +1,5 @@
 .btn_0 {
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 17.07px;
@@ -10,10 +9,10 @@
     display: flex;
     overflow: hidden;
     width: 100%;
-    height: 55px;
+    height: 45px;
     max-width: 215px;
     border: 2px solid currentColor;
-    padding: 0 30px;
+    padding: 0 22px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -36,13 +35,13 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-color: #2661E9;
+    background-color: var(--primary-200);
     transform: translateX(-100%);
     transition: 0.4s ease-in-out;
 }
 
 .btn_0:hover {
-    color: #ffffff;
+    color: var(--light-100);
     cursor: pointer;
 }
 
@@ -52,5 +51,5 @@
 }
 
 .btn_0 {
-    color: #fff;
+    color: var(--light-100);
 }

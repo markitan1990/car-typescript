@@ -7,15 +7,13 @@
 }
 
 .about_us h3 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     max-width: 420px;
     font-weight: 700;
     line-height: 57.6px;
     letter-spacing: -0.04em;
     text-align: left;
-    margin: 20px 0;
-    margin-left: -2px;
+    margin: 20px 0 20px -2px;
 }
 
 .pictures_about {
@@ -27,23 +25,13 @@
     height: 667px;
     top: 121px;
     left: 348px;
-    gap: 0px;
-    border-radius: 4px 0px 0px 0px;
-    opacity: 0px;
 }
 
 .about_us_img2 {
-    width: 401px;
-    height: 278px;
-    top: 438px;
-    left: 619px;
-    gap: 0px;
-    border-radius: 4px 0px 0px 0px;
-    border: 12px 0px 0px 0px;
-    opacity: 0px;
+    width: 400px;
+    top: 300px;
+    left: 260px;
     position: absolute;
-    top: 45%;
-    left: 50%;
 }
 
 .text_info {
@@ -55,8 +43,7 @@
 }
 
 .blue_text {
-    color: #2661E9;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-200);
     font-size: 17px;
     font-weight: 600;
     line-height: 20.77px;
@@ -78,17 +65,16 @@
     left: 1382px;
     gap: 0;
     opacity: 0;
-    background-color: #2661E9;
+    background-color: var(--primary-200);
 
 }
 
 .block_about h4 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 27.2px;
     text-align: left;
-    color: rgba(123, 133, 155, 0.85);
+    color: var(--dark-100);
     max-width: 400px;
     margin-top: 0;
     margin-bottom: 55px;
@@ -99,7 +85,6 @@
 }
 
 .block_about ul li {
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 23.8px;
