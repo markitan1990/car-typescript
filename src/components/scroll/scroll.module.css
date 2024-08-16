@@ -1,9 +1,4 @@
-body {
-  overflow: hidden;
-  /* Запрет прокрутки страницы */
-}
-
-.scrollable-screens-container {
+.screen {
   position: relative;
   height: 100vh;
 }
@@ -16,8 +11,6 @@ body {
   height: 100vh;
   opacity: 0;
   pointer-events: none;
-  /* transition: opacity 1s ease, transform 1s ease;
-  transform: translateY(1500px) scale(0.7); */
 }
 .roud video{ 
    min-width: 100%; 
@@ -35,18 +28,15 @@ body {
 .screen.active {
   pointer-events: all;
   opacity: 1;
-  /* transition: opacity 1s ease, transform 1s ease;
-  transform:  scale(1);  */
 }
 
-.navigation-panel {
+.navigation_panel {
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
   width: 200px;
-  /* background-color: #333; */
-  color: #fff;
+  color: var(--light-100);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,19 +45,19 @@ body {
 }
 
 
-.navigation-panel button {
+.navigation_panel button {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: var(--light-100);
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.6s ease;
 }
 
-.navigation-panel button:hover {
+.navigation_panel button:hover {
   background-color: #555;
 }
 
-.navigation-panel button.active {
-  color: red;
+.navigation_panel button.active {
+  color: var(--danger-100);
 }

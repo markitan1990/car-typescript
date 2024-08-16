@@ -1,4 +1,4 @@
-.car-box-text {
+.car_box_text {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -7,34 +7,31 @@
     margin: 70px 0 50px 0;
 }
 
-.car-box-text h4 {
-    font-family: 'Montserrat', sans-serif;
+.car_box_text h4 {
     font-size: 17px;
     font-weight: 600;
     line-height: 20.77px;
     letter-spacing: -0.04em;
     text-align: center;
-    color: rgba(38, 97, 233, 1);
+    color: var(--primary-200);
     margin: 0;
 }
 
-.car-box-text h3 {
-    font-family: 'Montserrat', sans-serif;
+.car_box_text h3 {
     font-size: 45px;
     font-weight: 700;
     line-height: 57.6px;
     text-align: center;
-    color: rgba(38, 44, 72, 1);
+    color: var(--primary-800);
     margin: 10px 0;
 }
 
-.car-box-text h5 {
-    font-family: 'Montserrat', sans-serif;
+.car_box_text h5 {
     font-size: 16px;
     font-weight: 600;
     line-height: 27.2px;
     text-align: center;
-    color: rgba(123, 133, 155, 0.85);
+    color: var(--dark-100);
     margin: 0;
     max-width: 850px;
 }
@@ -43,23 +40,23 @@
     width: 100%;
     max-width: 400px;
     overflow: hidden;
-    border: 1px solid rgba(232, 232, 232, 1);
+    border: 1px solid var(--light-400);
     margin: 30px;
 }
 
-.car-img-card {
+.car_img_card {
     position: relative;
     width: 100%;
     height: 292px;
     overflow: hidden;
 }
 
-.car-img-card img {
+.car_img_card img {
     width: 100%;
     transition: all ease 1.5s;
 }
 
-.cards-cars {
+.cards_cars {
     display: flex;
     justify-content: center;
 }
@@ -70,7 +67,6 @@
     left: 14px;
     width: 64px;
     height: 30px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 500;
     line-height: 15.88px;
@@ -87,48 +83,45 @@
     right: 14px;
     width: 55px;
     height: 30px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 500;
     line-height: 15.88px;
     letter-spacing: -0.04em;
     text-align: left;
-    background: #2661E9;
-    color: white;
+    background: var(--primary-200);
+    color: var(--light-100);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .cost {
-    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     font-weight: 600;
     line-height: 30.55px;
     letter-spacing: -0.04em;
     text-align: left;
-    text-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     bottom: 14px;
     left: 14px;
-    color: white;
+    color: var(--light-100);
 }
 
-.info-box {
+.info_box {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.brand-box {
+.brand_box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 20px 20px 5px 20px;
 }
 
-.brand-box div {
-    font-family: 'Montserrat', sans-serif;
+.brand_box div {
     font-size: 22px;
     font-weight: 600;
     line-height: 26.88px;
@@ -139,17 +132,16 @@
 }
 
 
-.brand-box img {
+.brand_box img {
     width: 34px;
 }
 
 .description {
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
     line-height: 25.5px;
     text-align: left;
-    color: rgba(123, 133, 155, 0.85);
+    color: var(--dark-100);
     margin: 0 20px;
     width: 90%;
     white-space: nowrap;
@@ -157,33 +149,32 @@
     text-overflow: ellipsis;
 }
 
-.space-line {
+.space_line {
     width: 90%;
     height: 1px;
-    background: rgba(232, 232, 232, 1);
+    background: var(--light-400);
     margin: 20px auto;
 }
 
-.data-box {
+.data_box {
     display: flex;
     flex-direction: row;
     margin: 0 20px 25px 20px;
 }
 
-.data-box div {
+.data_box div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
     line-height: 18.29px;
     margin-right: 25px;
-    color: rgba(123, 133, 155, 0.85);
+    color: var(--dark-100);
 
 }
 
-.data-box div svg {
+.data_box div svg {
     margin-right: 7px;
 }
 
@@ -195,7 +186,7 @@
     align-items: center;
 }
 
-.cards-cars {
+.cards_cars {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +196,7 @@
     cursor: pointer;
 }
 
-.content2:hover>.car-img-card>img {
+.content2:hover>.car_img_card>img {
     transform: scale(1.1);
     transition: all ease 1.5s;
 }

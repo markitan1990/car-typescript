@@ -1,13 +1,11 @@
-.login-box {
+.login_box {
     position: fixed;
     top: 40%;
     left: 50%;
-    margin-left: 40px;
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgb(0 0 0);
-    box-sizing: border-box;
     box-shadow: 0 15px 25px rgb(0 0 0 / 62%);
     border-radius: 10px;
     opacity: 0;
@@ -15,53 +13,53 @@
     pointer-events: none;
 }
 
-.login-box h2 {
+.login_box h2 {
     margin: 0 0 30px;
     padding: 0;
-    color: #fff;
+    color: var(--light-100);
     text-align: center;
 }
 
-.login-box .user-box {
+.login_box .user_box {
     position: relative;
 }
 
-.login-box .user-box input {
+.login_box .user_box input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: var(--light-100);
     margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--light-100);
     outline: none;
     background: transparent;
 }
 
-.login-box .user-box label {
+.login_box .user_box label {
     position: absolute;
     top: 0;
     left: 0;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: var(--light-100);
     pointer-events: none;
     transition: .5s;
 }
 
-.login-box .user-box input:focus~label,
-.login-box .user-box input:valid~label {
+.login_box .user_box input:focus~label,
+.login_box .user_box input:valid~label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: var(--primary-login-box);
     font-size: 12px;
 }
 
-.login-box form button {
+.login_box form button {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: var(--primary-login-box)4;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -72,27 +70,27 @@
     border: none;
 }
 
-.login-box button:hover {
-    background: #03e9f4;
-    color: #fff;
+.login_box button:hover {
+    background: var(--primary-login-box);
+    color: var(--light-100);
     border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-        0 0 25px #03e9f4,
-        0 0 50px #03e9f4,
-        0 0 100px #03e9f4;
+    box-shadow: 0 0 5px var(--primary-login-box),
+        0 0 25px var(--primary-login-box),
+        0 0 50px var(--primary-login-box),
+        0 0 100px var(--primary-login-box);
 }
 
-.login-box button span {
+.login_box button span {
     position: absolute;
     display: block;
 }
 
-.login-box button span:nth-child(1) {
+.login_box button span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, var(--primary-login-box));
     animation: btn-anim1 1s linear infinite;
 }
 
@@ -107,12 +105,12 @@
     }
 }
 
-.login-box button span:nth-child(2) {
+.login_box button span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, var(--primary-login-box));
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
 }
@@ -128,12 +126,12 @@
     }
 }
 
-.login-box button span:nth-child(3) {
+.login_box button span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, var(--primary-login-box));
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
 }
@@ -149,12 +147,12 @@
     }
 }
 
-.login-box button span:nth-child(4) {
+.login_box button span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, var(--primary-login-box));
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
 }
@@ -190,7 +188,7 @@
     background-color: #ffffff61;
 }
 
-.login-box.active {
+.login_box.active {
     transition: 0.3s;
     transition-delay: 0.4s;
     opacity: 1;

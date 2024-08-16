@@ -10,19 +10,19 @@
     }
 }
 
-.screen.active .uk-card {
+.screen.active .uk_card {
     animation-name: ukCard;
     animation-duration: 1.3s;
     animation-delay: 1.5s;
     animation-fill-mode: both;
 }
-.screen.active .uk-resul-block {
+.screen.active .uk_resul_block {
     animation-name: ukCard;
     animation-duration: 1.3s;
     animation-delay: 1.5s;
     animation-fill-mode: both;
 }
-.uk-card {
+.uk_card {
     position: relative;
     z-index: 6 ;
     width: 50%;
@@ -34,33 +34,33 @@
 
 }
 
-.calc-uk-card {
-    background-color: rgba(0, 0, 0, 0.879);
+.calc_uk_card {
+    background-color: var(--dark-900);
     padding: 30px;
     margin-top: 30px;
 }
 
-.uk-input,
-.uk-select {
-    background-color: #555; 
-    color: #ffffff; 
+.uk_input,
+.uk_select {
+    background-color: var(--dark-400);
+    color: var(--light-100);
     border: none; 
     margin-bottom: 10px; 
 }
 
-.uk-input::placeholder {
-    color: #ffffff; 
+.uk_input::placeholder {
+    color: var(--light-100);
 }
 
-.uk-input:focus,
-.uk-select:focus {
+.uk_input:focus,
+.uk_select:focus {
     outline: none; 
-    box-shadow: 0 0 0 2px #ffffff; 
+    box-shadow: 0 0 0 2px var(--light-100);
 }
 
 button {
-    background-color: #00000000; 
-    color: white; 
+    background-color: var(--dark-900);
+    color: var(--light-100);
     border: none; 
     padding: 10px 20px; 
     cursor: pointer; 
@@ -68,10 +68,10 @@ button {
 }
 
 button:hover {
-    background-color: #fffcfc; 
+    background-color: var(--light-100);
 }
 
-.uk-form-stacked {
+.uk_form_stacked {
     display: block;
     position: relative;
     margin: 40px auto;
@@ -81,10 +81,10 @@ button:hover {
 }
 
 h2 {
-    color: #AAAAAA;
+    color: var(--light-500);
 }
 
-.uk-form-stacked ul {
+.uk_form_stacked ul {
     list-style: none;
     margin: 15px 0;
     padding: 0;
@@ -92,7 +92,7 @@ h2 {
 }
 
 ul li {
-    color: #ffffff;
+    color: var(--light-100);
     display: block;
     position: relative;
     float: left;
@@ -106,23 +106,23 @@ ul li input[type=radio] {
 
 ul li label {
     cursor: pointer;
-    color: white;
+    color: var(--light-100);
     -webkit-transition: all 0.25s linear;
 }
 
-.uk-form-label {
+.uk_form_label {
     margin-bottom: 5px;
-    color: #ffffff;
+    color: var(--light-100);
 }
 
 ul li:hover label {
-    color: #824c4c;
+    color: var(--calc-label);
 }
 
 ul li .check {
     display: block;
     position: absolute;
-    border: 5px solid #AAAAAA;
+    border: 5px solid var(--light-500);
     border-radius: 100%;
     height: 25px;
     width: 25px;
@@ -134,7 +134,7 @@ ul li .check {
 }
 
 ul li:hover .check {
-    border: 5px solid #866161;
+    border: 5px solid var(--calc-label);
 }
 
 ul li .check::before {
@@ -152,19 +152,19 @@ ul li .check::before {
 }
 
 input[type=radio]:checked~.check {
-    border: 5px solid #0e3222;
+    border: 5px solid var(--calc-input-border);
 }
 
 input[type=radio]:checked~.check::before {
-    background: #12c912;
+    background:  var(--calc-input);
 }
 
 input[type=radio]:checked~label {
-    color: #12c912;
+    color: var(--calc-input);
 }
 
-.calc-section {
-    max-width: 1200;
+.calc_section {
+    max-width: 1200px;
     height: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -172,22 +172,21 @@ input[type=radio]:checked~label {
     justify-content: flex-start; 
 }
 
-.block-input .uk-form-label {
+.block_input .uk_form_label {
     margin-right: 15px;
 }
-.calc-RB-info{
-    color: white; 
+.calc_RB_info{
+    color: var(--light-100);
     width: 60%;
     margin-left: 100px;
 }
-.result-block{
-    background-color: rgba(255, 255, 255, 0.828);
-    padding: 30px;
-    padding-right: 80px;
+.result_block{
+    background-color: var(--light-100);
+    padding: 30px 80px 30px 30px;
     margin-right: -45px;
     height: 70%;
 }
-.uk-resul-block{
+.uk_resul_block{
     height: 100%;
     display: flex;
     align-items: center;

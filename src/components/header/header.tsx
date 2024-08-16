@@ -1,14 +1,16 @@
-import './header.css'
+import s from './header.module.scss'
 import { ButtonContactUs } from '../button/button'
 import { Logo } from '../logo/logo'
 import React, { useState, useEffect } from 'react';
+import {Modal} from "../modal/modal";
+import {LoginBox} from "../modal/login-box";
 
  
 function Question() {
     return <>
-        <div className="question">
-        <Image className="vectorphone" src='/img/Vectorphone.png' alt="Главная" />
-            <div className="question-info">
+        <div className={s.question}>
+        <Image className={s.vector_phone} src='/img/Vectorphone.png' alt="Главная" />
+            <div className={s.question_info}>
                 <p>Есть вопросы?</p>
                 <a href="tel:+375291212117">+375 29 12 12 117</a>
             </div>
@@ -16,11 +18,14 @@ function Question() {
     </>
 }
 
-function ContactUs() {
+interface ContactUsProps {
+    setIsContactModalOpen: () => void;
+}
+function ContactUs({ setIsContactModalOpen }: ContactUsProps) {
     return (
         <>
-            <div className="contact_us">
-                <ButtonContactUs value="Связаться" />
+            <div className={s.contact_us}>
+                <ButtonContactUs value="Связаться" onClickHandler={setIsContactModalOpen} />
                 <Question/>
             </div>
         </>
@@ -38,13 +43,13 @@ export function Image({ className, src, alt }: LogoProps) {
 }
 
 function BtnFlip({ value }: { value: string }) {
-    return <a href="http://localhost:3000/" className="btn-flip" data-back={value} data-front={value}>{value}</a>;
+    return <a href="http://localhost:3000/" className={s.btn_flip} data-back={value} data-front={value}>{value}</a>;
 }
 
 function Navigate() {
     return (
         <>
-            <div className="navigate">
+            <div className={s.navigate}>
                 <BtnFlip value="Главная" />
                 <BtnFlip value="Процесс покупки" />
                 <BtnFlip value="Стоимость доставки" />
@@ -57,6 +62,7 @@ function Navigate() {
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -75,12 +81,14 @@ export function Header() {
 
     return (
         <>
-            <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-                <div className='logo-nav'>
+            <header className={`${s.header} ${scrolled ? s.scrolled : ''}`}>
+                <Modal isOpen={isContactModalOpen} onClick={() => setIsContactModalOpen(false)} />
+                <LoginBox isOpen={isContactModalOpen} />
+                <div className={s.logo_nav}>
                     <Logo />
                     <Navigate />
                 </div>
-                <ContactUs />
+                <ContactUs setIsContactModalOpen={() => setIsContactModalOpen(true)} />
             </header>
         </>
     );

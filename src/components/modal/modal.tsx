@@ -1,5 +1,10 @@
-import { ToggleClassActive } from "../util";
+import s from "./login-box.module.scss";
 
-export function Modal(){
-    return <div className="modal"  onClick={ () => ToggleClassActive(["modal", "login-box"])}></div>;
+interface ModalProps {
+    isOpen: boolean;
+    onClick?: () => void;
+}
+
+export function Modal({ isOpen, onClick }: ModalProps){
+    return <div className={`${s.modal} ${isOpen ? s.active : ''}`} onClick={onClick}></div>;
 }

@@ -1,5 +1,5 @@
 import { Image } from "../header/header";
-import "./about-us.css"
+import s from "./about-us.module.scss"
 
 function SvgCheck() {
     return <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,16 +16,16 @@ function SvgCheck() {
 
 function AboutUsImg() {
     return (
-        <div className="picturies-about">
-            <Image className='about-us-img1' src="/img/image1.png" alt="Главная" />
-            <Image className='about-us-img2' src="/img/image.png" alt="Главная" />
+        <div className={s.pictures_about}>
+            <Image className={s.about_us_img1} src="/img/image1.png" alt="Главная" />
+            <Image className={s.about_us_img2} src="/img/image.png" alt="Главная" />
         </div>
     );
 }
 
 function BlueText() {
     return (
-        <div className="blue-text">
+        <div className={s.blue_text}>
             <p>Добро пожаловать в DRIVE HUB</p>
             <div></div>
         </div>
@@ -37,7 +37,7 @@ function AboutUsText() {
         <>
             <BlueText />
             <h3>Мы Известны Своим Сервисом</h3>
-            <div className="block-about">
+            <div className={s.block_about}>
                 <div>
                     <h4>Drive Hub - это самая привлекательная, креативная, современная компания премиум-класса автодилеров. </h4>
                     <ul>
@@ -55,9 +55,9 @@ function AboutUsText() {
 
 export function AboutUs() {
     return (
-        <div className="about-us">
+        <div className={s.about_us}>
             <AboutUsImg />
-            <div className="text-info">
+            <div className={s.text_info}>
                 <AboutUsText />
             </div>
         </div>

@@ -1,11 +1,11 @@
-import './logo.css'
+import s from './logo.module.scss'
 
 
 export function Logo() {
     return (
         <>
             <a href="http://drive-hub.online/">
-                <div className="logo" id="logo">
+                <div className={s.logo} id="logo">
                     <h1>DRIVE<span>HUB</span></h1>
                     <h4>ПОКУПКА И ДОСТАВКА АВТОМОБИЛЕЙ</h4>
                 </div>
