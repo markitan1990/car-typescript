@@ -1,0 +1,66 @@
+:root {
+  --dark-100: #7B859BD9;
+  --dark-200: #7A7A7A;
+  --dark-300: #738294;
+  --dark-400: #6B6B6B;
+  --dark-500: #393939;
+  --dark-600: #2A3141;
+  --dark-700: #1F2229;
+  --dark-900: #000000;
+  --light-100: #FFFFFF;
+  --light-200: #FDFDFD;
+  --light-300: #EEEEEE;
+  --light-400: #E7E7E7;
+  --light-500: #AAAAAA;
+  --primary-200: #2661E9;
+  --primary-800: #262C48;
+  --primary-900: #050C21;
+  --condition-new: #43C850D9;
+  --condition-pre-owned: #F4BA23D9;
+  --danger-100: #FF0000FF;
+  --calc-input: #12c912;
+  --calc-label: #866161;
+  --calc-input-border: #0e3222;
+  --primary-login-box: #03e9f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  background: var(--light-100);
+  color: var(--primary-900);
+
+  margin: 0;
+  padding: 0;
+}
