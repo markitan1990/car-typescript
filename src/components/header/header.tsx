@@ -2,6 +2,8 @@ import s from './header.module.scss'
 import { ButtonContactUs } from '../button/button'
 import { Logo } from '../logo/logo'
 import React, { useState, useEffect } from 'react';
+import {Modal} from "../modal/modal";
+import {LoginBox} from "../modal/login-box";
 
  
 function Question() {
@@ -16,11 +18,14 @@ function Question() {
     </>
 }
 
-function ContactUs() {
+interface ContactUsProps {
+    setIsContactModalOpen: () => void;
+}
+function ContactUs({ setIsContactModalOpen }: ContactUsProps) {
     return (
         <>
             <div className={s.contact_us}>
-                <ButtonContactUs value="Связаться" />
+                <ButtonContactUs value="Связаться" onClickHandler={setIsContactModalOpen} />
                 <Question/>
             </div>
         </>
@@ -57,6 +62,7 @@ function Navigate() {
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -75,12 +81,14 @@ export function Header() {
 
     return (
         <>
-            <header className={`${s.header} ${scrolled ? 'scrolled' : ''}`}>
+            <header className={`${s.header} ${scrolled ? s.scrolled : ''}`}>
+                <Modal isOpen={isContactModalOpen} onClick={() => setIsContactModalOpen(false)} />
+                <LoginBox isOpen={isContactModalOpen} />
                 <div className={s.logo_nav}>
                     <Logo />
                     <Navigate />
                 </div>
-                <ContactUs />
+                <ContactUs setIsContactModalOpen={() => setIsContactModalOpen(true)} />
             </header>
         </>
     );
