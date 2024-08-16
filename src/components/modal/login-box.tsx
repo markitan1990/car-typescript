@@ -1,4 +1,4 @@
-import './style.css';
+import s from './login-box.module.scss';
 import React, { useState } from 'react';
 import axios from 'axios'; // Импорт Axios
 
@@ -33,7 +33,7 @@ function Form() {
         <>
             {submitted ? <H2Text valueText={"Ожидайте звонка, наш специалист с вами свяжется"} /> :
                 <form onSubmit={handleSubmit}>
-                    <div className="user-box">
+                    <div className={s.user_box}>
                         <input
                             type="text"
                             name="name"
@@ -43,7 +43,7 @@ function Form() {
                         />
                         <label>Имя</label>
                     </div>
-                    <div className="user-box">
+                    <div className={s.user_box}>
                         <input
                             type="text"
                             name="phoneNumber"
@@ -66,10 +66,14 @@ function Form() {
         </>
     );
 }
-export function LoginBox() {
+
+interface LoginBoxProps {
+    isOpen: boolean;
+}
+export function LoginBox({ isOpen }: LoginBoxProps) {
     return (
         <>
-            <div className='login-box'>
+            <div className={`${s.login_box} ${isOpen ? s.active : ''}`}>
                 {/* <H2Text valueText={"Мы с вами свяжемся"} /> */}
                 <Form />
             </div>
