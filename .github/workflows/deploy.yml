@@ -41,14 +41,26 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/car-frontend:latest
 
+    # - name: Run Docker Compose on Remote Server
+    #   uses: appleboy/ssh-action@v0.1.4
+    #   with:
+    #     host: ${{ secrets.SSH_HOST }}            # IP-адрес или доменное имя вашего сервера
+    #     username: ${{ secrets.SSH_USERNAME }}    # Имя пользователя на сервере
+    #     key: ${{ secrets.SSH_PRIVATE_KEY }}      # Приватный SSH-ключ
+    #     port: ${{ secrets.SSH_PORT }}            # Порт SSH (обычно 22)
+    #     passphrase: ${{ secrets.SSH_PASSPHRASE }} # Пароль на SSH-ключ
+    #     script: |
+    #       cd /opt/frontend 
+    #       docker compose pull car-frontend
+    #       docker compose up -d 
+ 
     - name: Run Docker Compose on Remote Server
       uses: appleboy/ssh-action@v0.1.4
       with:
-        host: ${{ secrets.SSH_HOST }}            # IP-адрес или доменное имя вашего сервера
-        username: ${{ secrets.SSH_USERNAME }}    # Имя пользователя на сервере
-        key: ${{ secrets.SSH_PRIVATE_KEY }}      # Приватный SSH-ключ
-        port: ${{ secrets.SSH_PORT }}            # Порт SSH (обычно 22)
-        passphrase: ${{ secrets.SSH_PASSPHRASE }} # Пароль на SSH-ключ
+        host: ${{ secrets.SSH_HOST }}           # IP-адрес или доменное имя вашего сервера
+        username: ${{ secrets.SSH_USERNAME }}   # Имя пользователя на сервере
+        password: ${{ secrets.SSH_PASSWORD }}   # Пароль пользователя на сервере
+        port: ${{ secrets.SSH_PORT }}           # Порт SSH (обычно 22)
         script: |
           cd /opt/frontend 
           docker compose pull car-frontend
