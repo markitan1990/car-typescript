@@ -17,7 +17,7 @@ export const FeedbackForm = ({isOpen}: Props) => {
         e.preventDefault();
 
         try {
-            await axios.post('https://drive-hub.online/api/submit-form', formData);
+            await axios.post('/api/submit-form', formData);
             setSubmitted(true);
         } catch (error) {
             console.error('Ошибка при отправке данных:', error);
