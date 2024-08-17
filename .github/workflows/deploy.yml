@@ -48,6 +48,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           cd /opt/frontend  # Убедитесь, что путь указан корректно
           docker compose pull car-frontend  # Выкачивание последней версии образа
