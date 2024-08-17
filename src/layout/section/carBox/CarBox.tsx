@@ -14,7 +14,7 @@ export const CarBox = () => {
 
     async function fetchData() {
         try {
-            const response = await axios.get("http://127.0.0.1:8081/api/car-cards");
+            const response = await axios.get("https://drive-hub.online/api/car-cards");
             const carCards: CarCardsType[] = response.data;
 
             const shuffled = carCards.sort(() => 0.5 - Math.random());
