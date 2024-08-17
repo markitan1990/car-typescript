@@ -1,9 +1,9 @@
 import s from "./carBox.module.scss"
-import React, {useEffect, useState} from 'react';
-import {CardsCars} from "./cardsCars";
-import {CarCardsType} from "../../../common/consts/types";
+import React, { useEffect, useState } from 'react';
+import { CardsCars } from "./cardsCars";
+import { CarCardsType } from "../../../common/consts/types";
 import axios from "axios";
-import {testData} from "../../../common/consts";
+import { testData } from "../../../common/consts";
 
 export const CarBox = () => {
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
@@ -16,13 +16,14 @@ export const CarBox = () => {
         try {
             const response = await axios.get("http://localhost:8080/api/car-cards");
             const carCards: CarCardsType[] = response.data;
-            console.log(response)
+
             const shuffled = carCards.sort(() => 0.5 - Math.random());
             const selected = shuffled.slice(0, 6);
 
             setData(selected);
         } catch (error) {
-            console.error("Ошибка при получении данных:", error);
+            setData(testData);
+            console.error("Ошибка при получении данных: сервер не доступен", error);
         }
     }
 
@@ -35,7 +36,9 @@ export const CarBox = () => {
                     <h5>Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто к месту
                         назначения, но и полное документальное сопровождение сделки и прозрачное ценообразование.</h5>
                 </div>
-                <div className={s.cards_cars}><CardsCars data={data}/></div>
+                <div className={s.cards_cars}>
+                    <CardsCars data={data} />
+                </div>
             </div>
         </>
     );
