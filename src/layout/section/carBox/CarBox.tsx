@@ -14,7 +14,7 @@ export const CarBox = () => {
 
     async function fetchData() {
         try {
-            const response = await axios.get("http://localhost:8080/api/car-cards");
+            const response = await axios.get("http://localhost:8082/api/car-cards");
             const carCards: CarCardsType[] = response.data;
 
             const shuffled = carCards.sort(() => 0.5 - Math.random());
@@ -23,7 +23,7 @@ export const CarBox = () => {
             setData(selected);
         } catch (error) {
             setData(testData);
-            console.error("Ошибка при получении данных: сервер не доступен", error);
+            console.error("Ошибка при получении данных: сервер не доступ", error);
         }
     }
 

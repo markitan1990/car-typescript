@@ -17,7 +17,7 @@ export const FeedbackForm = ({isOpen}: Props) => {
         e.preventDefault();
 
         try {
-            await axios.post('http://localhost:8080/api/submit-form', formData);
+            await axios.post('http://localhost:8082/api/submit-form', formData);
             setSubmitted(true);
         } catch (error) {
             console.error('Ошибка при отправке данных:', error);
