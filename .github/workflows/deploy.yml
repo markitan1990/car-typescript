@@ -41,15 +41,15 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/car-frontend:latest
 
-    - name: Deploy to Remote Server via SSH
+    - name: Run Docker Compose on Remote Server
       uses: appleboy/ssh-action@v0.1.4
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        host: ${{ secrets.SSH_HOST }}            # IP-адрес или доменное имя вашего сервера
+        username: ${{ secrets.SSH_USERNAME }}    # Имя пользователя на сервере
+        key: ${{ secrets.SSH_PRIVATE_KEY }}      # Приватный SSH-ключ
+        port: ${{ secrets.SSH_PORT }}            # Порт SSH (обычно 22)
+        passphrase: ${{ secrets.SSH_PASSPHRASE }} # Пароль на SSH-ключ
         script: |
-          cd /opt/frontend  # Убедитесь, что путь указан корректно
-          docker compose pull car-frontend  # Выкачивание последней версии образа
-          docker compose up -d  # Перезапуск контейнера с новым образом
+          cd /opt/frontend 
+          docker compose pull car-frontend
+          docker compose up -d 
