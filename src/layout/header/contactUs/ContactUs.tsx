@@ -4,13 +4,15 @@ import {Question} from "../question";
 import s from '../header.module.scss'
 
 type Props ={
-    setIsContactModalOpen: () => void;
+    onClick: () => void;
+    className?: string;
+    closeNavModal?: () => void;
 }
-export const ContactUs = ({setIsContactModalOpen}: Props) => {
+export const ContactUs = ({onClick, className}: Props) => {
     return (
         <>
-            <div className={s.contact_us}>
-                <Button value="Связаться" onClickHandler={setIsContactModalOpen}/>
+            <div className={`${s.contact_us} ${className}`}>
+                <Button value="Связаться" onClick={onClick} />
                 <Question/>
             </div>
         </>
