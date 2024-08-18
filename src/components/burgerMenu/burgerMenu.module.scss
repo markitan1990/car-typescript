@@ -1,0 +1,63 @@
+.button {
+  all: unset;
+  cursor: pointer;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 38px;
+  z-index: 99999999;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--light-100);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--light-100);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: calc(50% - 10px);
+  }
+
+  &::after {
+    top: calc(50% + 6px);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:hover span{
+    background-color: var(--primary-200);
+
+  }
+
+  &.open span {
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+  }
+
+  &.open::before {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &.open::after {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

@@ -3,12 +3,12 @@ import s from './button.module.scss'
 type Props = {
     value: string;
     className?: string;
-    onClickHandler?: () => void;
+    onClick?: () => void;
 }
 
-export const Button = ({value, className, onClickHandler}: Props) => {
+export const Button = ({value, className, onClick}: Props) => {
     return (
-        <button className={`${s.btn_0} ${className}`} onClick={onClickHandler}>
+        <button className={`${s.btn_0} ${className}`} onClick={onClick}>
             {value}
         </button>
     );
