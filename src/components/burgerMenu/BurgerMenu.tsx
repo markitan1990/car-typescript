@@ -7,7 +7,7 @@ type Props = {
 
 export const BurgerMenu = ({onClick, isNavModalOpen}: Props) => {
     return (
-        <button className={`${s.button} ${isNavModalOpen ? s.open : ''}`} onClick={onClick}>
+        <button className={`${s.button_menu} ${isNavModalOpen ? s.open : ''}`} onClick={onClick}>
             <span></span>
         </button>
     );

@@ -1,55 +1,63 @@
-.btn_0 {
+.btn {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 17.07px;
+    line-height: 22px;
     letter-spacing: 0.07em;
-    text-align: left;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 45px;
-    max-width: 215px;
-    border: 2px solid currentColor;
+    text-align: center;
+    white-space: nowrap;
+    height: 65px;
+    border: 3px solid var(--light-100);
     padding: 0 22px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     transition: 0.4s ease-in-out;
-    background-color: transparent;
-}
-
-@media (min-width: 600px) {
-    .wrap {
-        width: 100%;
-        float: left;
-    }
-}
-
-.btn_0:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: var(--primary-200);
-    transform: translateX(-100%);
-    transition: 0.4s ease-in-out;
-}
-
-.btn_0:hover {
-    color: var(--light-100);
     cursor: pointer;
 }
 
-.btn_0:hover:before {
-    transition: 0.4s ease-in-out;
-    transform: translateX(0);
+.active {
+    background-color: var(--light-100);
+    color: var(--primary-200);
+
+    &:hover {
+        color: var(--light-100);
+        background-color: var(--primary-200);
+        border-color: var(--primary-200);
+    }
 }
 
-.btn_0 {
+.primary {
+    background-color: var(--primary-200);
     color: var(--light-100);
+    border-color: var(--primary-200);
+
+    &:hover {
+        color: var(--primary-200);
+        background-color: var(--light-100);
+        border-color: var(--light-100);
+    }
 }
+
+.primary2 {
+    background-color: var(--primary-200);
+    color: var(--light-100);
+    border-color: var(--primary-200);
+
+    &:hover {
+        color: var(--primary-200);
+        background-color: var(--light-100);
+        border-color: var(--primary-200);
+    }
+}
+
+.pure {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--light-100);
+
+    &:hover {
+        border-color: var(--primary-200);
+    }
+}
+
+
