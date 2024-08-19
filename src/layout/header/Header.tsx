@@ -32,13 +32,17 @@ export const Header = () => {
     const openNavModal = () => setIsNavModalOpen(prev => !prev);
     const closeNavModal = () => setIsNavModalOpen(false);
 
+    const handleContentClick = (e: React.MouseEvent) => {
+        e.stopPropagation();
+    };
+
     const isMobile = useMemo(() => width < 1500, [width]);
 
     return (
         <>
             <header className={`${s.header} ${scrolled ? s.scrolled : ''}`}>
-                <Modal isOpen={isFormModalOpen} onClick={closeFormModal}>
-                    <FeedbackForm isOpen={isFormModalOpen} />
+                <Modal isOpen={isFormModalOpen} onClick={closeFormModal} >
+                    <FeedbackForm isOpen={isFormModalOpen} handleContentClick={handleContentClick} closeFormModal={closeFormModal}/>
                 </Modal>
                     {isMobile ? (
                         <div className={s.logo_nav}>
@@ -47,7 +51,7 @@ export const Header = () => {
                             {isNavModalOpen && (
                                 <Modal isOpen={isNavModalOpen} onClick={closeNavModal}>
                                     <NavigateMobile />
-                                    <span></span>
+                                    <span className={s.line}></span>
                                     <ContactUs onClick={openFormModal} className={s.contact_us_mobile}/>
                                 </Modal>
                             )}

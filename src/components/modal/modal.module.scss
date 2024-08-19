@@ -10,18 +10,12 @@
     transition: 0.3s;
     display: flex;
     pointer-events: none;
-
-    span {
-        width: calc((100vw - 360px)/(1500 - 360) * (400 - 200) + 200px);
-        height: 3px;
-        background-color: var(--primary-200);
-    }
 }
 
 .modal.active {
     pointer-events: all;
     transition: 0.3s;
-    background-color: rgba(0, 0, 0, 0.49);
+    background-color: var(--dark-900);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -29,8 +23,3 @@
     gap: 50px;
 }
 
-@media (max-width: 1560px) {
-    .modal.active {
-        background-color: var(--dark-900);
-    }
-}

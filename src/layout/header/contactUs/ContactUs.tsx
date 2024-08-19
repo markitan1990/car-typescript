@@ -12,7 +12,7 @@ export const ContactUs = ({onClick, className}: Props) => {
     return (
         <>
             <div className={`${s.contact_us} ${className}`}>
-                <Button value="Связаться" onClick={onClick} />
+                <Button value="Связаться" onClick={onClick} variant={'primary'}/>
                 <Question/>
             </div>
         </>
