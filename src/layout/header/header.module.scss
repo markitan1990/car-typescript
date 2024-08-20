@@ -192,14 +192,6 @@
   align-items: center;
 }
 
-@media (min-width: 600px) {
-  .wrap {
-    width: 100%;
-    float: left;
-  }
-}
-
-
 @media (max-width: 650px) {
   .wrap {
     width: 100%;
@@ -212,5 +204,12 @@
     .btn_flip {
       font-size: calc((100vw - 360px) / (1500 - 360) * (40 - 22) + 22px);
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .wrap {
+    width: 100%;
+    float: left;
   }
 }
