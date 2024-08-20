@@ -1,11 +1,13 @@
 import s from "./carBox.module.scss"
-import React, { useEffect, useState } from 'react';
-import { CardsCars } from "./cardsCars";
-import { CarCardsType } from "../../../common/consts/types";
+import React, {useEffect, useMemo, useState} from 'react';
+import {CardsCars} from "./cardsCars";
+import {CarCardsType} from "../../../common/consts/types";
 import axios from "axios";
-import { testData } from "../../../common/consts";
+import {testData} from "../../../common/consts";
+import {useWindowSize} from "react-use";
 
 export const CarBox = () => {
+    const { width } = useWindowSize();
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
 
     useEffect(() => {
@@ -27,6 +29,8 @@ export const CarBox = () => {
         }
     }
 
+    const isMobile = useMemo(() => width < 582, [width]);
+
     return (
         <>
             <div className={s.car_box}>
@@ -36,9 +40,7 @@ export const CarBox = () => {
                     <h5>Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто к месту
                         назначения, но и полное документальное сопровождение сделки и прозрачное ценообразование.</h5>
                 </div>
-                <div className={s.cards_cars}>
-                    <CardsCars data={data} />
-                </div>
+                <CardsCars data={data} isMobile={isMobile}/>
             </div>
         </>
     );

@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .logo h1 {
@@ -39,4 +40,26 @@
 
 a{
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            line-height: 25px;
+
+            span {
+                font-size: 24px;
+                line-height: 25px;
+                margin-left: 5px;
+            }
+        }
+        h4 {
+            width: 170px;
+            font-size: 6px;
+            letter-spacing: 0.11em;
+        }
+    }
 }

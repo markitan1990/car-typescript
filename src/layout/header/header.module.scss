@@ -8,14 +8,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 20px 20px;
   transition: 1s;
 }
 
 .header.scrolled {
   transition: 1s;
   background-color: rgba(0, 0, 0, 0.8507);
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 .navigate {
