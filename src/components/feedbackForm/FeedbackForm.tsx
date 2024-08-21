@@ -1,19 +1,24 @@
 import s from './feedbackForm.module.scss';
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import axios from 'axios';
-import {z} from 'zod';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {Button} from '../button';
-import {ControlledTextField} from '../textField/ControlledTextField';
-import {Icon} from '../icon';
+import { z } from 'zod';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Button } from '../button';
+import { ControlledTextField } from '../textField/ControlledTextField';
+import { Icon } from '../icon';
 
 type Props = {
     isOpen: boolean;
     handleContentClick?: (e: React.MouseEvent) => void;
     closeFormModal: () => void;
 };
-
+type FormSubmit = {
+    name: string,
+    email: string,
+    phone: string,
+    message: string,
+}
 export type FormValues = z.infer<typeof loginSchema>;
 
 const loginSchema = z.object({
@@ -23,13 +28,13 @@ const loginSchema = z.object({
     message: z.string().min(10).max(500),
 });
 
-export const FeedbackForm = ({isOpen, handleContentClick, closeFormModal}: Props) => {
+export const FeedbackForm = ({ isOpen, handleContentClick, closeFormModal }: Props) => {
     const [submitted, setSubmitted] = useState(false);
     const form = useRef<HTMLFormElement>(null);
 
     const {
         control,
-        formState: {errors},
+        formState: { errors },
         handleSubmit,
         reset,
     } = useForm<FormValues>({
@@ -42,7 +47,7 @@ export const FeedbackForm = ({isOpen, handleContentClick, closeFormModal}: Props
         resolver: zodResolver(loginSchema),
     });
 
-    const onSubmit = async (data: any) => {
+    const onSubmit = async (data: FormSubmit) => {
         console.log(data);
         setSubmitted(true);
         reset();
@@ -68,11 +73,11 @@ export const FeedbackForm = ({isOpen, handleContentClick, closeFormModal}: Props
         >
             {submitted ? (
                 <div className={s.message_box}>
-                    <Icon iconId={'ok'} height={'71'} width={'71'} viewBox={'0 0 80 80'}/>
+                    <Icon iconId={'ok'} height={'71'} width={'71'} viewBox={'0 0 80 80'} />
                     <div className={s.message}>
                         <h1>Спасибо за обращение!</h1>
                         <span>Ваша заявка принята, мы вскоре с вами свяжемся</span>
-                        <Button value={'Закрыть'} onClick={closeModal} variant={'primary2'}/>
+                        <Button value={'Закрыть'} onClick={closeModal} variant={'primary2'} />
                     </div>
                 </div>
             ) : (
@@ -108,7 +113,7 @@ export const FeedbackForm = ({isOpen, handleContentClick, closeFormModal}: Props
                             errorMessage={errors.message?.message}
                             variant={'textarea'}
                         />
-                        <Button value={'Отправить сообщение'} type="submit" variant={'primary2'}/>
+                        <Button value={'Отправить сообщение'} type="submit" variant={'primary2'} />
                     </div>
                 </form>
             )}
