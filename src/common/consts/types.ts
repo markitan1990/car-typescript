@@ -27,3 +27,16 @@ export type CardType = {
     index: number,
     carCards: CarCardsType
 }
+
+export type AboutUsTextType = {
+    id: number,
+    value: string
+}
+
+export type ServicesType = {
+    id: number,
+    iconId: string,
+    value: string,
+    description: string
+}
+
