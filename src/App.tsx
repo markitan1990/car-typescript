@@ -4,6 +4,7 @@ import {AboutUs} from './layout/section/aboutUs';
 import {Home} from "./layout/section/home";
 import {Services} from "./layout/section/services";
 import './styles/globalStyles.scss'
+import {GoTopButton} from "./components/goTopButton";
 
 export function App() {
     return (
@@ -13,6 +14,7 @@ export function App() {
             <AboutUs/>
             <Services/>
             <CarBox/>
+            <GoTopButton/>
         </>
     );
 }
