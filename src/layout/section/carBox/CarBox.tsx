@@ -29,8 +29,6 @@ export const CarBox = () => {
         }
     }
 
-    const isMobile = useMemo(() => width < 582, [width]);
-
     return (
         <>
             <div className={s.car_box}>
