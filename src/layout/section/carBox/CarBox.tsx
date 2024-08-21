@@ -1,5 +1,5 @@
 import s from "./carBox.module.scss"
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {CardsCars} from "./cardsCars";
 import {CarCardsType} from "../../../common/consts/types";
 import axios from "axios";
@@ -7,7 +7,6 @@ import {testData} from "../../../common/consts";
 import {useWindowSize} from "react-use";
 
 export const CarBox = () => {
-    const { width } = useWindowSize();
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
 
     useEffect(() => {
