@@ -39,6 +39,45 @@ export const testData: CarCardsType[] = [
         car_engine: 2.1,
         description: "Хорошая машина как новая совсем, всем советую покупать на всю котлету",
         transmission: "Робот"
+    },
+    {
+        id: 4,
+        owner: "Mark",
+        brand: {car_cards_id: 1, car_name: "Toyota Tacoma", link: "toyota.png"},
+        car_mileage: 12000,
+        car_year: 2021,
+        cost: 1231231,
+        images: [{car_cards_id: 1, link: "car1.png"}],
+        car_condition: "НОВАЯ",
+        car_engine: 2.1,
+        description: "Хорошая машина как новая совсем, всем советую покупать на всю котлету",
+        transmission: "Робот"
+    },
+    {
+        id: 5,
+        owner: "Mark",
+        brand: {car_cards_id: 2, car_name: "Audi Q3 2.0T Prestige", link: "toyota.png"},
+        car_mileage: 16000,
+        car_year: 2021,
+        cost: 45000,
+        images: [{car_cards_id: 2, link: "car2.png"}],
+        car_condition: "Б/У",
+        car_engine: 1.6,
+        description: "Хорошая машина как новая совсем, всем советую покупать на всю котлету",
+        transmission: "Робот"
+    },
+    {
+        id: 6,
+        owner: "Mark",
+        brand: {car_cards_id: 3, car_name: "Audi Q3 2.0T Prestige", link: "toyota.png"},
+        car_mileage: 12000,
+        car_year: 2021,
+        cost: 25000,
+        images: [{car_cards_id: 3, link: "car2.png"}],
+        car_condition: "НОВАЯ",
+        car_engine: 2.1,
+        description: "Хорошая машина как новая совсем, всем советую покупать на всю котлету",
+        transmission: "Робот"
     }
 ]
 
@@ -47,7 +86,7 @@ export const navigateValue = [
     {value: "Процесс покупки"},
     {value: "Стоимость доставки"},
     {value: "Авто"},
-    {value: "Полезная информация"}
+    // {value: "Полезная информация"}
 ]
 
 export const aboutUsText = [

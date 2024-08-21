@@ -4,6 +4,12 @@
   justify-content: center;
   margin: 0 auto;
   padding: 75px 20px 54px 20px;
+
+  @media (max-width: 1300px) {
+    & {
+      padding: 0px 20px 54px 20px;
+    }
+  }
 }
 
 .car_box_text {
@@ -46,6 +52,7 @@
   margin: 0 auto;
   gap: 35px;
   flex-wrap: wrap;
+  max-width: 1250px;
 }
 
 .card {
@@ -117,7 +124,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding:13px 0 27px 0;
+  padding: 13px 0 27px 0;
 }
 
 
@@ -175,34 +182,34 @@
 
 
 .engine {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 55px;
-    height: 30px;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.88px;
-    letter-spacing: -0.04em;
-    text-align: left;
-    background: var(--primary-200);
-    color: var(--light-100);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 55px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.88px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  background: var(--primary-200);
+  color: var(--light-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cost {
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 30.55px;
-    letter-spacing: -0.04em;
-    text-align: left;
-    text-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5);
-    position: absolute;
-    bottom: 14px;
-    left: 14px;
-    color: var(--light-100);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30.55px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  text-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  color: var(--light-100);
 }
 
 

@@ -5,13 +5,12 @@ import s from "../carBox.module.scss";
 
 type Props = {
     data?: CarCardsType[]
-    isMobile: boolean
 }
-export const CardsCars = ({data, isMobile}: Props) => {
+export const CardsCars = ({data}: Props) => {
     return (
         <div className={s.cards_wrapper}>
             {data?.map((carData: CarCardsType, index) => (
-                <CardCar key={index} data={{index: index, carCards: carData}} isMobile={isMobile}/>
+                <CardCar key={index} data={{index: index, carCards: carData}}/>
             ))}
         </div>
     )

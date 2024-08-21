@@ -1,5 +1,5 @@
 import s from './header.module.scss';
-import React, {useState, useEffect, useCallback, useMemo} from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Navigate } from "./navigate";
 import { ContactUs } from "./contactUs";
 import { FeedbackForm } from "../../components/feedbackForm";
@@ -36,35 +36,33 @@ export const Header = () => {
         e.stopPropagation();
     };
 
-    const isMobile = useMemo(() => width < 1500, [width]);
+    const isMobile = useMemo(() => width < 1200, [width]);
 
     return (
         <>
             <header className={`${s.header} ${scrolled ? s.scrolled : ''}`}>
                 <Modal isOpen={isFormModalOpen} onClick={closeFormModal} >
-                    <FeedbackForm isOpen={isFormModalOpen} handleContentClick={handleContentClick} closeFormModal={closeFormModal}/>
+                    <FeedbackForm isOpen={isFormModalOpen} handleContentClick={handleContentClick} closeFormModal={closeFormModal} />
                 </Modal>
-                    {isMobile ? (
+                {isMobile ? (
+                    <div className={s.logo_nav}>
+                        <Logo />
+                        <BurgerMenu isNavModalOpen={isNavModalOpen} onClick={openNavModal} />
+                        <Modal isOpen={isNavModalOpen} onClick={closeNavModal}>
+                            <NavigateMobile />
+                            <span className={s.line}></span>
+                            <ContactUs onClick={openFormModal} className={s.contact_us_mobile} />
+                        </Modal>
+                    </div>
+                ) : (
+                    <>
                         <div className={s.logo_nav}>
                             <Logo />
-                            <BurgerMenu isNavModalOpen={isNavModalOpen} onClick={openNavModal}/>
-                            {isNavModalOpen && (
-                                <Modal isOpen={isNavModalOpen} onClick={closeNavModal}>
-                                    <NavigateMobile />
-                                    <span className={s.line}></span>
-                                    <ContactUs onClick={openFormModal} className={s.contact_us_mobile}/>
-                                </Modal>
-                            )}
+                            <Navigate />
                         </div>
-                    ) : (
-                        <>
-                        <div className={s.logo_nav}>
-                            <Logo />
-                            <Navigate/>
-                        </div>
-                        <ContactUs onClick={openFormModal}/>
-                        </>
-                    )}
+                        <ContactUs onClick={openFormModal} />
+                    </>
+                )}
             </header>
         </>
     );

@@ -1,40 +1,43 @@
 .button_menu {
   cursor: pointer;
   position: fixed;
-  width: 40px;
-  height: 40px;
-  top: 20px;
-  right: 20px;
+  width: 35px;
+  height: 25px;
+  top: 25px;
+  right: 25px;
+  transition: 0.3s ease-in-out;
 
   span {
     display: block;
-    width: 30px;
+    width: 35px;
     height: 4px;
     background-color: var(--light-100);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
   }
 
   &::before,
   &::after {
     content: '';
     display: block;
-    width: 30px;
+    width: 35px;
     height: 4px;
     background-color: var(--light-100);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
   }
 
   &::before {
-    top: calc(50% - 10px);
+    top: calc(50% - 12px);
   }
 
   &::after {
-    top: calc(50% + 6px);
+    top: calc(50% + 8px);
   }
 
   &:hover::before,

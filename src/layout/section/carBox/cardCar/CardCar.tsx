@@ -6,10 +6,9 @@ import s from "../carBox.module.scss";
 
 type Props = {
     data: CardType
-    isMobile: boolean
 }
 
-export const CardCar = ({data, isMobile}: Props) => {
+export const CardCar = ({data}: Props) => {
     const carData = data.carCards
 
     const formatNumber = (number: number) => {
@@ -24,12 +23,12 @@ export const CardCar = ({data, isMobile}: Props) => {
                 <Image className={s.img}
                        src={`/img/${carData.images[0].link}`}
                        alt={carData.images[0].link.split(".")[0]}/>
-                {!isMobile &&
+                
                     <div className={`${s.condition} ${carData.car_condition === "НОВАЯ" ? s.new : s.pre_owned}`}>
                         {carData.car_condition}
-                    </div>}
-                {!isMobile && <div className={s.engine}>{carData.car_engine} л</div>}
-                {!isMobile && <div className={s.cost}>$ {formatNumber(carData.cost)}</div>}
+                    </div>
+                <div className={s.engine}>{carData.car_engine} л</div>
+                <div className={s.cost}>$ {formatNumber(carData.cost)}</div>
             </div>
             <div className={s.info_box}>
                 <div className={s.brand}>
@@ -37,9 +36,9 @@ export const CardCar = ({data, isMobile}: Props) => {
                         {carData.car_year + "  "}
                         {carData.brand.car_name}
                     </h2>
-                    {!isMobile && <Image className={s.logo_brand}
+                    <Image className={s.logo_brand}
                                          src={`/img/brand/${carData.brand.link}`}
-                                         alt={carData.brand.link.split(".")[0]}/>}
+                                         alt={carData.brand.link.split(".")[0]}/>
 
                 </div>
                 <div className={s.description}>
@@ -54,10 +53,10 @@ export const CardCar = ({data, isMobile}: Props) => {
                         <Icon iconId={'gear'} height={'17'} width={'17'} viewBox={'0 0 17 17'}/>
                         {carData.transmission}
                     </div>
-                    {!isMobile && <div className={s.data_icon}>
+                    <div className={s.data_icon}>
                         <Icon iconId={'speedometer'} height={'16'} width={'16'} viewBox={'0 0 16 16'}/>
                         {formatNumber(carData.car_mileage)}
-                    </div>}
+                    </div>
                 </div>
             </div>
         </div>

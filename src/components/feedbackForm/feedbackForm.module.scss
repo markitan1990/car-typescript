@@ -38,29 +38,35 @@
 
   .cross {
     position: absolute;
-    content: '';
+    content: "";
     cursor: pointer;
-    top: 40px;
+    top: 20px;
     right: 20px;
-    width: 40px;
-    height: 6px;
-    background-color: #D9D9D9;
-    rotate: 45deg;
+    width: 37px;
+    height: 35px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
-      rotate: -90deg;
+      rotate: 45deg;
       width: 40px;
       height: 6px;
+      top: 15px;
       background-color: #D9D9D9;
     }
 
-    &:hover {
-      background-color: var(--dark-200);
+    &::after {
+      content: '';
+      position: absolute;
+      rotate: -45deg;
+      width: 40px;
+      height: 6px;
+      top: 15px;
+      background-color: #D9D9D9;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:hover::after {
       background-color: var(--dark-200);
     }
   }
