@@ -4,7 +4,6 @@ import {CardsCars} from "./cardsCars";
 import {CarCardsType} from "../../../common/consts/types";
 import axios from "axios";
 import {testData} from "../../../common/consts";
-import {useWindowSize} from "react-use";
 
 export const CarBox = () => {
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
