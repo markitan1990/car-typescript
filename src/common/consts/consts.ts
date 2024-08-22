@@ -1,4 +1,4 @@
-import {CarCardsType} from "./types";
+import {AboutUsTextType, CarCardsType, ServicesType} from "./types";
 
 export const testData: CarCardsType[] = [
     {
@@ -89,10 +89,16 @@ export const navigateValue = [
     // {value: "Полезная информация"}
 ]
 
-export const aboutUsText = [
+export const aboutUsText: AboutUsTextType[] = [
     {id: 1, value: 'В каком техническом обслуживании нуждается автомобиль?'},
     {id: 2, value: 'Система контроля доступа зарядила электромобиль.'},
     {id: 3, value: 'Система контроля доступа заряда.'},
     {id: 4, value: 'Система контроля доступа заряда электромобиля.'},
     {id: 5, value: 'Система контроля доступа заряда электро.'}
+]
+export const servicesData: ServicesType[] = [
+    {id: 1, iconId: 'price', value: 'Самые низкие цены', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
+    {id: 2, iconId: 'agreement', value: 'Работа по договору', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
+    {id: 3, iconId: 'cargo', value: 'Отслеживание груза', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
+    {id: 4, iconId: 'check', value: 'Отслеживание груза', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
 ]

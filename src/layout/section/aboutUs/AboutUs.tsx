@@ -2,6 +2,7 @@ import s from "./aboutUs.module.scss"
 import {Image} from "../../../components/image";
 import {Icon} from "../../../components/icon";
 import {aboutUsText} from "../../../common/consts/consts";
+import {AboutUsTextType} from "../../../common/consts/types";
 
 
 export const AboutUs = () => {
@@ -21,7 +22,7 @@ export const AboutUs = () => {
                     <h4>Drive Hub - это самая привлекательная, креативная, современная компания премиум-класса
                         автодилеров. </h4>
                     <ul>
-                        {aboutUsText.map(i =>
+                        {aboutUsText.map((i: AboutUsTextType) =>
                             <li key={i.id}>
                                 <span><Icon iconId={'arrow'} height={'12'} width={'16'} viewBox={'0 0 16 12'}/></span>
                                 {i.value}
