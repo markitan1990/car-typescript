@@ -116,6 +116,10 @@
     padding-right: 16px;
   }
 
+  svg {
+    fill: var(--primary-200);
+  }
+
   &:hover {
     border-bottom: 1px solid #00000029;
 
@@ -155,7 +159,7 @@
   }
 }
 
-@media (max-width: 555px) {
+@media (max-width: 520px) {
   .about_us {
     .about_us_img1 {
       width: 340px;
@@ -174,8 +178,8 @@
       padding: 50px 20px;
 
       h3 {
-        font-size: 35px;
-        line-height: 50px;
+        font-size: 30px;
+        line-height: 38.4px;
       }
     }
     .block_about {
