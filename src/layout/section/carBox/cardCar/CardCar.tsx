@@ -15,8 +15,6 @@ export const CardCar = ({data}: Props) => {
         return number.toLocaleString('en-US');
     };
 
-    console.log(carData.images[0].link.split(".")[0])
-
     return (
         <div key={data.index} className={s.card}>
             <div className={s.car_img_card}>
