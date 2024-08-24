@@ -1,24 +1,27 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef} from "react";
 import s from "./carInfo.module.scss";
-import { Image } from "../../../components/image";
-
+import {Image} from "../../../components/image";
 
 export const CarInfo = () => {
     const [activeInfo, setActiveInfo] = useState<number | null>(null);
     const infoRef = useRef<HTMLDivElement | null>(null);
+    const buttonsRef = useRef<HTMLDivElement | null>(null);
 
     const handleButtonClick = (index: number) => {
-        // Переключение состояния при нажатии на кнопку
         if (activeInfo === index) {
-            setActiveInfo(null); // Закрываем блок, если нажата та же кнопка
+            setActiveInfo(null);
         } else {
-            setActiveInfo(index); // Открываем блок с новой информацией
+            setActiveInfo(index);
         }
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-        if (infoRef.current && !infoRef.current.contains(event.target as Node)) {
-            setActiveInfo(null); // Закрываем блок, если клик вне блока
+        const target = event.target as Node;
+        if (
+            infoRef.current && !infoRef.current.contains(target) &&
+            buttonsRef.current && !buttonsRef.current.contains(target)
+        ) {
+            setActiveInfo(null);
         }
     };
 
@@ -44,24 +47,25 @@ export const CarInfo = () => {
                         назначения, но и полное документальное сопровождение сделки и прозрачное ценообразование.</h5>
                 </div>
                 <div className={s.image_wrapper}>
-                    <Image className={s.car_img} src="/img/car_info.png" alt="Информация о машине" />
-                    <div className={s.buttons}>
+                    <Image className={s.car_img} src="/img/car_info.png" alt="Информация о машине"/>
+                    <div ref={buttonsRef} className={s.buttons}>
                         {[1, 2, 3, 4].map((_, index) => (
                             <button
                                 key={index}
                                 className={s.circle_button}
                                 onClick={(e) => {
-                                    e.stopPropagation(); // Остановка распространения события
+                                    e.stopPropagation();
                                     handleButtonClick(index);
                                 }}
-                                style={{ top: `${20 + index * 60}px`, left: `${20 + index * 60}px` }} // adjust positioning as needed
+                                style={{top: `${20 + index * 60}px`, left: `${20 + index * 60}px`}}
                             />
                         ))}
                     </div>
                 </div>
                 {activeInfo !== null && (
-                    <div ref={infoRef} className={s.info_block}>
-                            <p>{`Информация о блоке ${activeInfo + 1}`}</p>
+                    <div ref={infoRef} className={s.info_block}
+                         style={{top: `${20 + activeInfo * 5}px`, left: `${100}px`}}>
+                        <p>{`Информация о блоке ${activeInfo + 1}`}</p>
                     </div>
                 )}
             </div>
