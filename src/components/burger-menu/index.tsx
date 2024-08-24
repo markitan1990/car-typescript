@@ -1,13 +1,14 @@
-import * as s from './index.module.scss'
+import { clsx } from 'clsx'
+import s from './index.module.scss'
 
 interface BurgerMenu {
   onClick?: () => void
   isNavModalOpen: boolean
 }
 
-export function BurgerMenu({ onClick, isNavModalOpen }: BurgerMenu) {
+export function BurgerMenu({ onClick, isNavModalOpen }: Readonly<BurgerMenu>) {
   return (
-    <button className={`${s.button_menu} ${isNavModalOpen ? s.open : ''}`} onClick={onClick}>
+    <button className={clsx(s.button_menu, isNavModalOpen && s.open)} onClick={onClick}>
       <span></span>
     </button>
   )
