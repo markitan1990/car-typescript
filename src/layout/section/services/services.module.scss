@@ -110,7 +110,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* количество строк */
+    -webkit-line-clamp: 3;
+    /* количество строк */
     -webkit-box-orient: vertical;
   }
 
@@ -137,51 +138,69 @@
 
     &:hover {
       border-bottom: 1px solid rgba(38, 97, 233, 0.85);
+      transition: 0.3s;
 
       span {
         color: rgba(38, 97, 233, 0.85);
+        transition: 0.3s;
       }
 
       svg {
         fill: rgba(38, 97, 233, 0.85);
+        transition: 0.3s;
       }
     }
   }
 }
 
-.link {
+
+.link_box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 23.8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
+  width: 100%;
+  transition: 0.3s;
 
-  span {
-    color: var(--primary-200);
-    padding-right: 6px;
-  }
+  .link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23.8px;
+    transition: 0.3s;
+    position: relative;
 
-  span:first-child {
-    color: var(--dark-200);
-    padding-right: 16px;
-  }
+    span {
+      color: var(--primary-200);
+      padding-right: 6px;
+    }
 
-  svg {
-    fill: var(--primary-200);
-  }
-
-  &:hover {
-    border-bottom: 1px solid #00000029;
+    span:first-child {
+      color: var(--dark-200);
+      padding-right: 16px;
+    }
 
     svg {
-      margin-left: 6px;
+      position: absolute;
+      fill: var(--primary-200);
+      transition: 0.3s;
+      right: -15px;
+      top: 3px;
+    }
+
+    &:hover {
+      svg {
+        margin-left: 6px;
+        right: -25px;
+        transition: 0.3s;
+      }
     }
   }
 }
 
+.link_box:has(.link:hover) {
+  border-bottom: 1px solid #00000029;
+  transition: 0.3s;
+}
 
 @media (max-width: 1200px) {
   .about_services {
@@ -223,15 +242,21 @@
   }
 }
 
-@media (max-width: 520px) {
-.about_services {
-  h3 {
-    width: 100%;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 38.4px;
+@media (max-width: 800px) {
+  .services {
+    margin: 42px 0;
   }
 }
+
+@media (max-width: 520px) {
+  .about_services {
+    h3 {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 38.4px;
+    }
+  }
 
   .services_group {
     margin-top: 20px;
