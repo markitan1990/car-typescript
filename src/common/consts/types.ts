@@ -40,3 +40,9 @@ export type ServicesType = {
     description: string
 }
 
+export type infoDataType = {
+    id: number,
+    title: string,
+    description: string,
+    className: string
+}

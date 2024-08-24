@@ -1,4 +1,4 @@
-import {AboutUsTextType, CarCardsType, ServicesType} from "./types";
+import {AboutUsTextType, CarCardsType, infoDataType, ServicesType} from "./types";
 
 export const testData: CarCardsType[] = [
     {
@@ -102,3 +102,12 @@ export const servicesData: ServicesType[] = [
     {id: 3, iconId: 'cargo', value: 'Отслеживание груза', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
     {id: 4, iconId: 'check', value: 'Отслеживание груза', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
 ]
+
+export const infoData: infoDataType[] = [
+    { id: 1, title: "Audi 2021 E-Tron 1", description: "Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто 1.", className: 'button1' },
+    { id: 2, title: "Audi 2021 E-Tron 2", description: "Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто 2.", className: 'button2' },
+    { id: 3, title: "Audi 2021 E-Tron 3", description: "Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто 3.", className: 'button3' },
+    { id: 4, title: "Audi 2021 E-Tron 4", description: "Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто 4.", className: 'button4' },
+    { id: 5, title: "Audi 2021 E-Tron 5", description: "Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто 5.", className: 'button5' },
+];
+
