@@ -163,7 +163,8 @@ export const infoData: InfoDataType[] = [
 
 export const loginSchema = z.object({
   name: z.string().min(3).max(30),
-  email: z.string().email(),
-  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, 'Invalid phone number'),
-  message: z.string().min(10).max(500),
+  phone: z.string()
+      .min(10, 'Phone number should have at least 10 digits')
+      .max(15, 'Phone number should have at most 15 digits')
+      .regex(/^\+?\d{10,15}$/, 'Invalid phone number format'),
 });

@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import axios from 'axios';
 import {z} from 'zod';
 import {useForm} from 'react-hook-form';
@@ -19,13 +19,16 @@ interface FeedbackFormProps {
 
 interface FormSubmit {
     name: string,
-    email: string,
+    email?: string,
     phone: string,
-    message: string,
+    message?: string,
 }
 
-export type FormValues = z.infer<typeof loginSchema>;
-
+type FormValues = z.infer<typeof loginSchema> ;
+interface ExtendedFormValues extends FormValues {
+    email?: string;
+    message?: string;
+}
 export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Readonly<FeedbackFormProps>) {
     const [submitted, setSubmitted] = useState(false);
     const form = useRef<HTMLFormElement>(null);
@@ -35,7 +38,8 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
         formState: {errors},
         handleSubmit,
         reset,
-    } = useForm<FormValues>({
+        clearErrors,
+    } = useForm<ExtendedFormValues>({
         defaultValues: {
             name: '',
             email: '',
@@ -43,10 +47,10 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
             message: '',
         },
         resolver: zodResolver(loginSchema),
+        mode: 'onChange',
     });
 
     const onSubmit = async (data: FormSubmit) => {
-        console.log(data);
         setSubmitted(true);
         reset();
         try {
@@ -60,9 +64,15 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
 
     const closeModal = () => {
         closeFormModal();
-        reset();
         setSubmitted(false);
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            clearErrors();
+            reset();
+        }
+    }, [isOpen, clearErrors]);
 
     return (
         <button className={clsx(s.login_box, isOpen && s.active, submitted && s.submitted)}
@@ -77,7 +87,7 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
                     </div>
                 </div>
             ) : (
-                <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                <form ref={form} onSubmit={handleSubmit(onSubmit)} noValidate>
                     <button className={s.cross} onClick={closeModal}></button>
                     <div className={s.user_box}>
                         <h1 className={s.title_form}>Мы с вами свяжемся</h1>
@@ -90,7 +100,6 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
                         />
                         <ControlledTextField
                             control={control}
-                            errorMessage={errors.email?.message}
                             placeholder={'Email'}
                             name={'email'}
                             type={'email'}
@@ -106,7 +115,6 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
                             control={control}
                             name={'message'}
                             placeholder={'Напишите сообщение...'}
-                            errorMessage={errors.message?.message}
                             variant={'textarea'}
                         />
                         <Button value={'Отправить сообщение'} type="submit" variant={'primary2'}/>

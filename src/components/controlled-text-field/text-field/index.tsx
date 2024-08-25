@@ -51,7 +51,7 @@ export function TextField ({
                     {...CommonProps}
                 />
             )}
-            {error && <span className={s.error}>{error}</span>}
+            <span className={s.error}>{error ?? ''}</span>
         </div>
     );
 }
