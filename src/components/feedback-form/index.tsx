@@ -116,7 +116,7 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
                             placeholder={'Напишите сообщение...'}
                             variant={'textarea'}
                         />
-                        <Button value={'Отправить сообщение'} type="submit" variant={'primary2'}/>
+                        <Button value={'Отправить сообщение'} type="submit" variant={'primary2'} className={s.submit_btn}/>
                     </div>
                 </form>
             )}

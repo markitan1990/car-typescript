@@ -1,10 +1,5 @@
 .btn {
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 0.07em;
-    text-align: center;
     white-space: nowrap;
     height: 65px;
     border: 3px solid var(--light-100);
@@ -71,5 +66,14 @@
 
     &:hover {
         border-color: var(--primary-200);
+    }
+}
+
+.dark {
+    background-color: var(--primary-200);
+    color: var(--light-100);
+
+    &:hover {
+        background-color: var(--dark-700);
     }
 }
