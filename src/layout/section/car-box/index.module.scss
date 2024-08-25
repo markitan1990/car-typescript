@@ -4,12 +4,6 @@
   justify-content: center;
   margin: 0 auto;
   padding: 75px 20px 54px 20px;
-
-  @media (max-width: 1300px) {
-    & {
-      padding: 0 20px 54px 20px;
-    }
-  }
 }
 
 .car_box_text {
@@ -61,7 +55,20 @@
   max-width: 393px;
   max-height: 492px;
   border: 1px solid #E8E8E8;
+  cursor: pointer;
 
+  &:hover {
+    .img {
+      transform: scale(1.1);
+    }
+
+    .brand {
+      h2 {
+        transition: color ease 0.3s;
+        color: var(--primary-200);
+      }
+    }
+  }
 }
 
 .car_img_card {
@@ -79,12 +86,7 @@
   border: 1px;
   height: 100%;
   object-fit: cover;
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all ease 1.5s;
-  }
+  transition: all ease 1.5s;
 }
 
 .info_box {
@@ -180,7 +182,6 @@
   }
 }
 
-
 .engine {
   position: absolute;
   top: 14px;
@@ -212,6 +213,11 @@
   color: var(--light-100);
 }
 
+@media (max-width: 1300px) {
+  .car_box {
+    padding: 0 20px 54px 20px;
+  }
+}
 
 @media screen and (max-width: 880px) {
   .car_box_text {

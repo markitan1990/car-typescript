@@ -17,7 +17,7 @@ export function CardCar({data}: Readonly<CardCarProps>) {
     };
 
     return (
-        <div key={data.index} className={s.card}>
+        <a href="http://localhost:3000/" className={s.card}>
             <div className={s.car_img_card}>
                 <Image className={s.img}
                        src={`/img/${carData.images[0].link}`}
@@ -58,6 +58,6 @@ export function CardCar({data}: Readonly<CardCarProps>) {
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     );
 }
