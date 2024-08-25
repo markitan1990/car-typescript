@@ -1,0 +1,6 @@
+export { Header } from './header'
+export { AboutUs } from './section/about-us'
+export { CarBox } from './section/car-box'
+export { Home } from './section/home'
+export { Services } from './section/services'
+export { CarInfo } from './section/car-info'

@@ -1,9 +1,10 @@
-import s from "../header.module.scss";
-import {navigateValue} from "../../../common/consts/consts";
 import React from "react";
-import {ButtonFlip} from "../buttonFlip";
+import {ButtonFlip} from "../button-flip";
+import {navigateValue} from "../../../consts";
 
-export const NavigateMobile = () => {
+import s from "../index.module.scss";
+
+export function NavigateMobile () {
     return (
         <div className={s.wrapper_mobile}>
             <div className={s.navigate_mobile}>

@@ -1,0 +1,6 @@
+export { testData } from './consts'
+export { navigateValue } from './consts'
+export { aboutUsText } from './consts'
+export { servicesData } from './consts'
+export { infoData } from './consts'
+export { loginSchema } from './consts'
