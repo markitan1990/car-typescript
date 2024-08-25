@@ -1,1 +1,0 @@
-export { testData } from './consts'

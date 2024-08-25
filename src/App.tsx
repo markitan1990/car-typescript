@@ -1,11 +1,7 @@
-import {CarBox} from "./layout/section/carBox";
-import {Header} from "./layout/header";
-import {AboutUs} from './layout/section/aboutUs';
-import {Home} from "./layout/section/home";
-import {Services} from "./layout/section/services";
+import {CarBox, Header, AboutUs, Services, Home, CarInfo} from "./layout";
+import {GoTopButton} from "./components";
+
 import './styles/globalStyles.scss'
-import {GoTopButton} from "./components/goTopButton";
-import {CarInfo} from "./layout/section/carInfo";
 
 export function App() {
     return (
