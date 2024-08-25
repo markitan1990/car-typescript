@@ -73,7 +73,6 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
             reset();
         }
     }, [isOpen, clearErrors, reset]);
-
     return (
         <button className={clsx(s.login_box, isOpen && s.active, submitted && s.submitted)}
                 onClick={handleContentClick}>
