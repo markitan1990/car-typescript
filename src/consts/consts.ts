@@ -1,4 +1,4 @@
-import { AboutUsTextType, CarCardsType, InfoDataType, ServicesType } from './types'
+import {AboutServicesDataType, AboutUsTextType, CarCardsType, InfoDataType, ServicesType} from './types'
 import {z} from "zod";
 
 export const testData: CarCardsType[] = [
@@ -87,7 +87,6 @@ export const navigateValue = [
   { value: 'Процесс покупки' },
   { value: 'Стоимость доставки' },
   { value: 'Авто' },
-  // {value: "Полезная информация"}
 ]
 
 export const aboutUsText: AboutUsTextType[] = [
@@ -159,6 +158,33 @@ export const infoData: InfoDataType[] = [
     description: 'Мы предоставляем не только всю необходимую информацию о ходе транспортировки авто 5.',
     className: 'button5',
   },
+]
+
+export const aboutServicesData: AboutServicesDataType[] = [
+  {
+    id: 1,
+    iconSrc: 'service1.png',
+    alt: 'Сервис 1',
+    value: 'Таможенный калькулятор',
+    description:
+      'Сделано многофункциональным',
+  },
+  {
+    id: 2,
+    iconSrc: 'service2.png',
+    alt: 'Сервис 2',
+    value: 'Таможенный калькулятор',
+    description:
+      'Сделано многофункциональным',
+  },
+  {
+    id: 3,
+    iconSrc: 'service3.png',
+    alt: 'Сервис 3',
+    value: 'Таможенный калькулятор',
+    description:
+      'Сделано многофункциональным',
+  }
 ]
 
 export const loginSchema = z.object({
