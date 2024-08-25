@@ -1,6 +1,6 @@
 import React from 'react';
 import {Controller} from 'react-hook-form';
-import {TextField} from "./index";
+import {TextField} from "./text-field";
 
 interface ControlledTextFieldProps {
     control: any;

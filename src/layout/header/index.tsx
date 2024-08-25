@@ -1,16 +1,17 @@
-import { BurgerMenu, FeedbackForm, Modal, Logo } from 'components'
-import { MouseEvent, useCallback, useEffect, useMemo, useState } from 'react'
-import { useWindowSize } from 'react-use'
-import { ContactUs } from './contact-us'
-import { Navigate } from './navigate'
-import { NavigateMobile } from './navigate/NavigateMobile'
+import {BurgerMenu, FeedbackForm, Modal, Logo} from 'components'
+import {MouseEvent, useCallback, useEffect, useMemo, useState} from 'react'
+import {useWindowSize} from 'react-use'
+import {ContactUs} from './contact-us'
+import {NavigateMobile} from "./navigate/navigate-mobile";
+import {NavigateDesktop} from "./navigate/navigate-desktop";
 import clsx from "clsx";
 
 import s from './index.module.scss'
 
 
-export function Header () {
-    const { width } = useWindowSize()
+
+export function Header() {
+    const {width} = useWindowSize()
     const [scrolled, setScrolled] = useState(false)
     const [isFormModalOpen, setIsFormModalOpen] = useState(false)
     const [isNavModalOpen, setIsNavModalOpen] = useState(false)
@@ -40,32 +41,32 @@ export function Header () {
 
     return (
         <header className={clsx(s.header, scrolled && s.scrolled)}>
-    <Modal isOpen={isFormModalOpen} onClick={closeFormModal}>
-    <FeedbackForm
-        isOpen={isFormModalOpen}
-    handleContentClick={handleContentClick}
-    closeFormModal={closeFormModal}
-    />
-    </Modal>
-    {isMobile ? (
-        <div className={s.logo_nav}>
-        <Logo />
-        <BurgerMenu isNavModalOpen={isNavModalOpen} onClick={openNavModal} />
-    <Modal isOpen={isNavModalOpen} onClick={closeNavModal}>
-    <NavigateMobile />
-    <span className={s.line}></span>
-        <ContactUs onClick={openFormModal} className={s.contact_us_mobile} />
-    </Modal>
-    </div>
-    ) : (
-        <>
-            <div className={s.logo_nav}>
-            <Logo />
-            <Navigate />
-            </div>
-            <ContactUs onClick={openFormModal} />
-    </>
-    )}
-    </header>
-)
+            <Modal isOpen={isFormModalOpen} onClick={closeFormModal}>
+                <FeedbackForm
+                    isOpen={isFormModalOpen}
+                    handleContentClick={handleContentClick}
+                    closeFormModal={closeFormModal}
+                />
+            </Modal>
+            {isMobile ? (
+                <div className={s.logo_nav}>
+                    <Logo/>
+                    <BurgerMenu isNavModalOpen={isNavModalOpen} onClick={openNavModal}/>
+                    <Modal isOpen={isNavModalOpen} onClick={closeNavModal}>
+                        <NavigateMobile/>
+                        <span className={s.line}></span>
+                        <ContactUs onClick={openFormModal} className={s.contact_us_mobile}/>
+                    </Modal>
+                </div>
+            ) : (
+                <>
+                    <div className={s.logo_nav}>
+                        <Logo/>
+                        <NavigateDesktop/>
+                    </div>
+                    <ContactUs onClick={openFormModal}/>
+                </>
+            )}
+        </header>
+    )
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import {ButtonFlip} from "../button-flip";
-import {navigateValue} from "../../../consts";
+import {ButtonFlip} from "../../button-flip";
+import {navigateValue} from "../../../../consts";
 
-import s from "../index.module.scss";
+import s from "../../index.module.scss";
 
 export function NavigateMobile () {
     return (
