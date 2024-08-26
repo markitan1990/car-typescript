@@ -5,7 +5,6 @@ import s from "./index.module.scss"
 
 export function Contact() {
 
-
     return (
         <div className={s.contact_wrapper}>
             <div className={s.contact}>
