@@ -6,7 +6,6 @@ import {aboutServicesData} from "../../../consts/consts";
 import s from "./index.module.scss"
 
 export function AboutServices() {
-
     return (
         <div className={s.about_services_wrapper}>
             <div className={s.services}>
