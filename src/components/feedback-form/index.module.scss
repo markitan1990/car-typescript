@@ -110,6 +110,66 @@
   }
 }
 
+.contact_login_box {
+  width: 433px;
+  height: 519px;
+  padding: 20px;
+  background: var(--light-100);
+  box-shadow: 0 15px 25px #0000001A;
+  border-radius: 12px;
+  overflow-y: auto;
+
+  &.submitted {
+    max-height: 470px;
+    transition: max-height 0.8s ease;
+  }
+
+  .user_box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+  }
+
+  .title_form {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 42.5px;
+    text-align: left;
+margin-bottom: 13px;
+  }
+
+  .message_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.9s ease;
+
+    .message {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 56px;
+        text-align: center;
+        color: var(--primary-200);
+        padding-top: 7px;
+      }
+
+      span {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        padding: 10px 80px 60px 80px;
+      }
+    }
+  }
+}
+
 .submit_btn {
   font-size: 21px;
   font-weight: 600;
@@ -123,8 +183,6 @@
       top: 20px;
       right: 20px;
     }
-
-    // padding: 50px 30px;
 
     .title_form {
       font-size: 28px;
@@ -161,8 +219,6 @@
       right: 14px;
     }
 
-    // padding: 77px 20px 96px 20px;
-
     .title_form {
       font-size: 23px;
       font-weight: 600;
@@ -192,6 +248,11 @@
 }
 
 .login_box.submitted .message_box {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+.contact_login_box.submitted .message_box {
   opacity: 1;
   transition: opacity 0.9s ease;
 }
