@@ -8,7 +8,7 @@ interface ButtonProps {
     onClick?: () => void;
     type?: 'submit';
     fullWidth?: boolean;
-    variant?: 'link' | 'primary' | 'primary2' | 'pure' | 'active' ;
+    variant?: 'link' | 'primary' | 'primary2' | 'pure' | 'active' | 'dark' ;
 }
 
 export function Button ({value, className, onClick, type, variant, fullWidth}: Readonly<ButtonProps>) {

@@ -46,3 +46,11 @@ export interface InfoDataType {
   description: string
   className: string
 }
+
+export interface AboutServicesDataType {
+  id: number
+  iconSrc: string
+  alt: string
+  value: string
+  description: string
+}

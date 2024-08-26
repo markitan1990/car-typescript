@@ -23,7 +23,6 @@
   max-width: 725px;
   display: flex;
   margin: 0 38px;
-  // justify-content: space-between;
   align-items: center;
   gap: 25px;
 }
@@ -87,15 +86,12 @@
 
   button {
     height: 40px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 17px;
-  }
+    line-height: 17.07px;
+    letter-spacing: 0.07em;
+    text-align: center;
 
-  @media (max-width: 1300px) {
-    button {
-      font-size: 15px;
-    }
   }
 }
 
