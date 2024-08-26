@@ -21,7 +21,9 @@ export function AboutServices() {
                 </div>
                 {aboutServicesData.map((i: AboutServicesDataType) =>
                     <a href="http://localhost:3000/" key={i.id} className={s.about_services_item}>
-                        <Image className={s.service_img} src={"/img/" + i.iconSrc} alt={i.alt}/>
+                        <div className={s.service_img}>
+                            <Image className={s.img} src={"/img/" + i.iconSrc} alt={i.alt}/>
+                        </div>
                         <h5>{i.value}</h5>
                         <p>{i.description}</p>
                     </a>
