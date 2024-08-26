@@ -62,6 +62,11 @@
   border: 2px solid var(--primary-200);
   cursor: pointer;
   position: absolute;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid #2681e9;
+  }
 
   &::after {
     content: "";
@@ -75,6 +80,10 @@
     background-color: var(--primary-200);
     transition: all 0.3s ease-in-out;
     z-index: 2;
+  }
+
+  &:hover::after {
+    background-color: #2681e9;
   }
 
   &.active::after {
