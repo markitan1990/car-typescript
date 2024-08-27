@@ -1,7 +1,7 @@
 import React from "react";
 import {Button, FeedbackForm, Icon} from "../../../components";
 
-import s from "./index.module.scss"
+import s from "./index.module.scss";
 
 export function Contact() {
 
@@ -27,7 +27,7 @@ export function Contact() {
                         </div>
                     </div>
                 </div>
-                    <FeedbackForm isOpen={true} isContact={true}/>
+                <FeedbackForm isOpen={true} isContact={true}/>
             </div>
         </div>
     );

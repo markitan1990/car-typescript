@@ -108,16 +108,26 @@
       }
     }
   }
+
+  .submit_btn {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 26.88px;
+    text-align: center;
+  }
 }
 
 .contact_login_box {
   width: 433px;
   height: 519px;
-  padding: 20px;
+  padding: 50px 52px 61px 52px;
+  margin-top: 33px;
   background: var(--light-100);
-  box-shadow: 0 15px 25px #0000001A;
+  box-shadow: 0 0 20px 0 #0000001A;
+
   border-radius: 12px;
   overflow-y: auto;
+
 
   &.submitted {
     max-height: 470px;
@@ -136,7 +146,7 @@
     font-weight: 600;
     line-height: 42.5px;
     text-align: left;
-margin-bottom: 13px;
+    margin-bottom: 13px;
   }
 
   .message_box {
@@ -168,13 +178,53 @@ margin-bottom: 13px;
       }
     }
   }
+
+  .submit_btn {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+  }
 }
 
-.submit_btn {
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 26.88px;
-  text-align: center;
+
+
+@media (max-width: 1297px) {
+  .contact_login_box {
+    width: 100%;
+    max-width: 369px;
+    height: 540px;
+    padding: 40px 52px 47px 52px;
+
+    &.submitted {
+      max-height: 540px;
+    }
+
+    .submit_btn {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 23.04px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .contact_login_box {
+    max-width: 300px;
+    height: 560px;
+    padding: 20px 20px;
+
+    &.submitted {
+      max-height: 560px;
+    }
+
+    .submit_btn {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 19.2px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -226,7 +276,7 @@ margin-bottom: 13px;
     }
 
     button {
-      font-size: 16px; 
+      font-size: 16px;
     }
 
     .message_box {

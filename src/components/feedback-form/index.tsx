@@ -54,13 +54,13 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal, isCont
     const onSubmit = async (data: FormSubmit) => {
         setSubmitted(true);
         reset();
-        // try {
-        //     await axios.post('/api/submit-form', data);
-        // } catch (error) {
-        //     console.error('Ошибка при отправке данных:', error);
-        // } finally {
+        try {
+            await axios.post('/api/submit-form', data);
+        } catch (error) {
+            console.error('Ошибка при отправке данных:', error);
+        } finally {
             setSubmitted(true);
-        // }
+        }
     };
 
     const closeModal = () => {
@@ -121,7 +121,7 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal, isCont
                             variant={'textarea'}
                             isContact={isContact}
                         />
-                        <Button value={'Отправить сообщение'} type="submit" variant={'primary2'} className={s.submit_btn}/>
+                        <Button value={'Отправить сообщение'} type="submit" variant={isContact ? 'dark' : 'primary2'} className={s.submit_btn}/>
                     </div>
                 </form>
             )}
