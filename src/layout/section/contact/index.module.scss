@@ -1,12 +1,24 @@
 .contact_wrapper {
   display: flex;
   justify-content: center;
+  position: relative;
   padding: 0 20px;
-  background-image: url('../../../../public/img/background_car.png');
-  background-size: 1920px 529px;
-  background-repeat: no-repeat;
-  background-position: left top;
   overflow: hidden;
+  width: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-image: url('../../../../public/img/background_car.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    z-index: -1;
+  }
 }
 
 .contact {
@@ -136,6 +148,10 @@
 @media (max-width: 1297px) {
   .contact_wrapper {
     padding: 0 56px;
+
+      &::before {
+        height: 36%;
+      }
   }
 
   .contact {
@@ -176,6 +192,10 @@
 @media (max-width: 580px) {
   .contact_wrapper {
     padding: 0 20px;
+
+      &::before {
+        height: 37%;
+      }
   }
 
   .contact_container {
@@ -235,5 +255,13 @@
     font-size: 15px;
     font-weight: 600;
     line-height: 19.2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact_wrapper {
+    &::before {
+      height: 39%;
+    }
   }
 }
