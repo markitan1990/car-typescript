@@ -7,7 +7,6 @@
     width: 100%;
     height: 80px;
     padding: 20px 30px 20px 30px;
-
     font-size: 19px;
     font-weight: 500;
     line-height: 32px;
@@ -15,6 +14,23 @@
     border: 2px solid var(--light-400);
     background-color: var(--light-400);
     border-radius: 2px;
+
+    &:hover {
+      cursor: initial;
+    }
+  }
+
+  .contact_input {
+    width: 100%;
+    height: 51px;
+    padding: 14px 19px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23.8px;
+    text-align: left;
+    color: var(--dark-400);
+    border: 0;
+    background-color: var(--light-400);
 
     &:hover {
       cursor: initial;
@@ -30,6 +46,38 @@
     height: 170px;
     vertical-align: top;
     resize: both;
+    padding: 20px 30px 20px 30px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--dark-400);
+    border: 2px solid var(--light-400);
+    background-color: var(--light-400);
+    border-radius: 2px;
+
+    &:hover {
+      cursor: initial;
+    }
+
+  }
+
+  .textarea_contact {
+    font-family: Montserrat, sans-serif;
+    height: 95px;
+    vertical-align: top;
+    resize: both;
+    padding: 14px 19px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23.8px;
+    color: var(--dark-400);
+    border: 2px solid var(--light-400);
+    background-color: var(--light-400);
+    border-radius: 2px;
+
+    &:hover {
+      cursor: initial;
+    }
   }
 
   .error {

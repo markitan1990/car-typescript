@@ -10,6 +10,7 @@ interface ControlledTextFieldProps {
     type?: string;
     variant?: string;
     rows?: number;
+    isContact?: boolean;
 }
 
 export function ControlledTextField ({
@@ -20,6 +21,7 @@ export function ControlledTextField ({
                                         type,
                                         variant,
                                         rows,
+                                        isContact,
                                     }: Readonly<ControlledTextFieldProps>) {
     return (
         <Controller
@@ -33,6 +35,7 @@ export function ControlledTextField ({
                     placeholder={placeholder}
                     error={errorMessage}
                     rows={rows}
+                    isContact={isContact}
                 />
             )}
         />

@@ -1,8 +1,7 @@
-import {CarBox, Header, AboutUs, Services, Home, CarInfo} from "./layout";
+import {CarBox, Header, AboutUs, Services, Home, CarInfo, AboutServices, Contact} from "./layout";
 import {GoTopButton} from "./components";
 
 import './styles/globalStyles.scss'
-import {AboutServices} from "./layout/section/about-services";
 
 export function App() {
     return (
@@ -14,6 +13,7 @@ export function App() {
             <CarBox/>
             <CarInfo/>
             <AboutServices/>
+            <Contact/>
             <GoTopButton/>
         </>
     );

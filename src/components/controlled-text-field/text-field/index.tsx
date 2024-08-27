@@ -12,10 +12,12 @@ export interface TextFieldProps {
     error?: string;
     name?: string;
     rows?: number;
+    isContact?: boolean;
+
     [key: string]: any;
 }
 
-export function TextField ({
+export function TextField({
                               variant,
                               placeholder,
                               type = 'text',
@@ -24,6 +26,7 @@ export function TextField ({
                               error,
                               name,
                               rows,
+                              isContact,
                               ...rest
                           }: Readonly<TextFieldProps>) {
     const CommonProps = {
@@ -34,13 +37,13 @@ export function TextField ({
         ...rest
     };
 
-    const classNames = clsx(s.input, variant && s[variant], error && s.input_error)
+    const classNames = clsx(isContact ? s.contact_input : s.input, variant && s[variant], error && s.input_error)
 
     return (
         <div className={s.textField}>
             {variant === 'textarea' ? (
                 <textarea
-                    className={classNames}
+                    className={isContact ? s.textarea_contact : s.textarea}
                     rows={rows ?? 4}
                     {...CommonProps}
                 />

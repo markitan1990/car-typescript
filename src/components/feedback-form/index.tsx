@@ -11,25 +11,26 @@ import {clsx} from "clsx";
 
 import s from './index.module.scss';
 
-interface FeedbackFormProps {
+export interface FeedbackFormProps {
     isOpen: boolean;
     handleContentClick?: (e: React.MouseEvent) => void;
-    closeFormModal: () => void;
+    closeFormModal?: () => void;
+    isContact?: boolean;
 }
 
-interface FormSubmit {
+export interface FormSubmit {
     name: string,
     email?: string,
     phone: string,
     message?: string,
 }
 
-type FormValues = z.infer<typeof loginSchema> ;
-interface ExtendedFormValues extends FormValues {
+export type FormValues = z.infer<typeof loginSchema> ;
+export interface ExtendedFormValues extends FormValues {
     email?: string;
     message?: string;
 }
-export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Readonly<FeedbackFormProps>) {
+export function FeedbackForm({isOpen, handleContentClick, closeFormModal, isContact}: Readonly<FeedbackFormProps>) {
     const [submitted, setSubmitted] = useState(false);
     const form = useRef<HTMLFormElement>(null);
 
@@ -63,7 +64,7 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
     };
 
     const closeModal = () => {
-        closeFormModal();
+        closeFormModal && closeFormModal();
         setSubmitted(false);
     };
 
@@ -74,7 +75,7 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
         }
     }, [isOpen, clearErrors, reset]);
     return (
-        <button className={clsx(s.login_box, isOpen && s.active, submitted && s.submitted)}
+        <button className={clsx(isContact ? s.contact_login_box : s.login_box, isOpen && s.active, submitted && s.submitted)}
                 onClick={handleContentClick}>
             {submitted ? (
                 <div className={s.message_box}>
@@ -82,7 +83,7 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
                     <div className={s.message}>
                         <h1>Спасибо за обращение!</h1>
                         <span>Ваша заявка принята, мы вскоре с вами свяжемся</span>
-                        <Button value={'Закрыть'} onClick={closeModal} variant={'primary2'}/>
+                        <Button value={'Закрыть'} onClick={closeModal} variant={'primary2'} className={s.submit_btn}/>
                     </div>
                 </div>
             ) : (
@@ -96,12 +97,14 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
                             placeholder={'Ваше имя'}
                             name={'name'}
                             type={'text'}
+                            isContact={isContact}
                         />
                         <ControlledTextField
                             control={control}
                             placeholder={'Email'}
                             name={'email'}
                             type={'email'}
+                            isContact={isContact}
                         />
                         <ControlledTextField
                             control={control}
@@ -109,14 +112,16 @@ export function FeedbackForm({isOpen, handleContentClick, closeFormModal}: Reado
                             placeholder={'Ваш номер'}
                             name={'phone'}
                             type={'tel'}
+                            isContact={isContact}
                         />
                         <ControlledTextField
                             control={control}
                             name={'message'}
                             placeholder={'Напишите сообщение...'}
                             variant={'textarea'}
+                            isContact={isContact}
                         />
-                        <Button value={'Отправить сообщение'} type="submit" variant={'primary2'} className={s.submit_btn}/>
+                        <Button value={'Отправить сообщение'} type="submit" variant={isContact ? 'dark' : 'primary2'} className={s.submit_btn}/>
                     </div>
                 </form>
             )}
