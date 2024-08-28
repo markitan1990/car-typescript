@@ -41,6 +41,17 @@
 .icons {
   display: flex;
   gap: 22px;
+
+  svg {
+    cursor: pointer;
+    fill: var(--light-100);
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      fill: var(--primary-200);
+    }
+  }
 }
 
 @media (max-width: 582px) {
