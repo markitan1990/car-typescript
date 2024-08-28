@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {Icon} from "../icon";
 
 import s from './index.module.scss'
@@ -32,18 +32,18 @@ export function GoTopButton() {
     return (
         <>
             {showBtn && (
-            <button className={s.button}
-    onClick={scrollToTop}
-    >
-    <Icon
-        className={s.arrow}
-    iconId={"arrow_top"}
-    width={'40'}
-    height={'40'}
-    viewBox={'0 0 512 512'}
-    />
-    </button>
-)}
-    </>
-)
+                <button className={s.button}
+                        onClick={scrollToTop}
+                >
+                    <Icon
+                        className={s.arrow}
+                        iconId={"arrow_top"}
+                        width={'40'}
+                        height={'40'}
+                        viewBox={'0 0 512 512'}
+                    />
+                </button>
+            )}
+        </>
+    )
 }
