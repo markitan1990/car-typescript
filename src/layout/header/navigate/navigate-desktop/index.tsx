@@ -7,7 +7,7 @@ export function NavigateDesktop () {
     return (
         <div className={s.navigate}>
             {navigateValue.map(i =>
-                <ButtonFlip key={i.value} value={i.value}/>
+                <ButtonFlip key={i.value} value={i.value} path={i.path}/>
             )}
         </div>
     );

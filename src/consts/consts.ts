@@ -83,10 +83,10 @@ export const testData: CarCardsType[] = [
 ]
 
 export const navigateValue = [
-  { value: 'Главная' },
-  { value: 'Процесс покупки' },
-  { value: 'Стоимость доставки' },
-  { value: 'Авто' },
+  { value: 'Главная', path: '/home' },
+  { value: 'Процесс покупки', path: '/home' },
+  { value: 'Стоимость доставки', path: '/home' },
+  { value: 'Авто', path: '/cars' },
 ]
 
 export const aboutUsText: AboutUsTextType[] = [

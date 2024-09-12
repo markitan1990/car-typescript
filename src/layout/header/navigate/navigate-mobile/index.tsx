@@ -9,7 +9,7 @@ export function NavigateMobile () {
         <div className={s.wrapper_mobile}>
             <div className={s.navigate_mobile}>
                 {navigateValue.map(i =>
-                    <ButtonFlip key={i.value} value={i.value}/>
+                    <ButtonFlip key={i.value} value={i.value} path={i.path}/>
                 )}</div>
         </div>
     );
