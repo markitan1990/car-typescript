@@ -8,8 +8,6 @@ import clsx from "clsx";
 
 import s from './index.module.scss'
 
-
-
 export function Header() {
     const {width} = useWindowSize()
     const [scrolled, setScrolled] = useState(false)
@@ -39,6 +37,8 @@ export function Header() {
 
     const isMobile = useMemo(() => width < 1200, [width])
 
+    console.log(isNavModalOpen)
+
     return (
         <header className={clsx(s.header, scrolled && s.scrolled)}>
             <Modal isOpen={isFormModalOpen} onClick={closeFormModal}>
@@ -53,7 +53,7 @@ export function Header() {
                     <Logo/>
                     <BurgerMenu isNavModalOpen={isNavModalOpen} onClick={openNavModal}/>
                     <Modal isOpen={isNavModalOpen} onClick={closeNavModal}>
-                        <NavigateMobile/>
+                        <NavigateMobile onClick={closeNavModal}/>
                         <span className={s.line}></span>
                         <ContactUs onClick={openFormModal} className={s.contact_us_mobile}/>
                     </Modal>
