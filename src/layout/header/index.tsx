@@ -37,8 +37,6 @@ export function Header() {
 
     const isMobile = useMemo(() => width < 1200, [width])
 
-    console.log(isNavModalOpen)
-
     return (
         <header className={clsx(s.header, scrolled && s.scrolled)}>
             <Modal isOpen={isFormModalOpen} onClick={closeFormModal}>
