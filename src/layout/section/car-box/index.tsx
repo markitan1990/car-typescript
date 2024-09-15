@@ -3,8 +3,10 @@ import {CardsCars} from "./cards-cars";
 import {CarCardsType} from "../../../consts/types";
 import axios from "axios";
 import {testData} from "../../../consts";
+import { Element } from 'react-scroll'
 
 import s from "./index.module.scss"
+
 
 export function CarBox () {
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
@@ -28,7 +30,7 @@ export function CarBox () {
     }
 
     return (
-        <div className={s.car_box}>
+        <Element name={'carBox'} className={s.car_box}>
             <div className={s.car_box_text}>
                 <h4>Посмотрите наши автомобили в наличии</h4>
                 <h3>Лучшие Автомобили На Рынке</h3>
@@ -36,7 +38,7 @@ export function CarBox () {
                     назначения, но и полное документальное сопровождение сделки и прозрачное ценообразование.</h5>
             </div>
             <CardsCars data={data}/>
-        </div>
+        </Element>
 );
 }
 

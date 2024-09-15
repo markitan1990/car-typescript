@@ -6,7 +6,7 @@ import './../styles/globalStyles.scss'
 export function HomePage() {
     return (
         <>
-            <Home/>
+            <Home />
             <AboutUs/>
             <Services/>
             <CarBox/>

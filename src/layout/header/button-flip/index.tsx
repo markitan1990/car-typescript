@@ -1,15 +1,24 @@
-import React from "react";
+import React from 'react'
+import { Link } from 'react-scroll'
 
 import s from './../index.module.scss'
 
 interface ButtonFlipProps {
-    value: string,
-    path: string,
+  value: string,
+  path: string,
 }
-export function ButtonFlip ({value, path}: Readonly<ButtonFlipProps>) {
-    return (
-        <button>
-        <a href={"http://localhost:3000" + path} className={s.btn_flip} data-back={value} data-front={value}>{value}</a>
-        </button>
-)
+
+export function ButtonFlip({ value, path }: Readonly<ButtonFlipProps>) {
+
+  return (
+      <Link
+        className={s.btn_flip}
+        activeClass={s.active}
+        to={path}
+        spy={true}
+        smooth={true}
+        offset={path !== 'home' ? -80 : 0}
+        duration={300}
+      >{value}</Link>
+  )
 }
