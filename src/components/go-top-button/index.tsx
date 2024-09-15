@@ -38,9 +38,9 @@ export function GoTopButton() {
                     <Icon
                         className={s.arrow}
                         iconId={"arrow_top"}
-                        width={'40'}
-                        height={'40'}
-                        viewBox={'0 0 512 512'}
+                        width={'77'}
+                        height={'77'}
+                        viewBox={'0 0 77 77'}
                     />
                 </button>
             )}

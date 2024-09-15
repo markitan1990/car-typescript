@@ -63,6 +63,11 @@
   background-color: var(--primary-200);
 }
 
+.navigate .btn_flip.active {
+  transition: 2s ease;
+  border-bottom: 1px solid var(--primary-200);
+}
+
 .question {
   display: flex;
   height: 100%;
