@@ -2,6 +2,7 @@
   "name": "car-typescript",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://drive-hub.online",
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@testing-library/jest-dom": "^5.17.0",
