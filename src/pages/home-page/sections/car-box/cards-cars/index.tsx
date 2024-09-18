@@ -1,6 +1,6 @@
 import React from "react";
-import {CarCardsType} from "../../../../consts/types";
 import {CardCar} from "../card-car";
+import {CarCardsType} from "../../../../../consts/types";
 
 import s from "../index.module.scss";
 

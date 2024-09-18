@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useRef, useMemo, useCallback} from "react";
-import {Image} from "../../../components";
+import {infoData} from "../../../../consts";
+import {Image} from "../../../../components";
 import {useWindowSize} from "react-use";
-import {infoData} from "../../../consts";
 
 import s from "./index.module.scss";
+
 
 export function CarInfo() {
     const {width} = useWindowSize();

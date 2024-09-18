@@ -1,7 +1,7 @@
-import {GoTopButton} from "../components";
-import {AboutUs, Home, Services, CarBox, CarInfo, AboutServices, Contact} from "../layout";
+import {GoTopButton} from "../../components";
+import {Home, AboutUs, Services, CarBox, CarInfo, AboutServices, Contact} from "./sections";
 
-import './../styles/globalStyles.scss'
+import '../../styles/globalStyles.scss'
 
 export function HomePage() {
     return (

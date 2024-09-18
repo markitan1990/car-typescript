@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 import { useWindowSize } from 'react-use'
-import { ServicesType } from '../../../consts/types'
-import { servicesData } from '../../../consts'
-import { Icon } from '../../../components'
 import { Element } from 'react-scroll'
+import {servicesData} from "../../../../consts";
+import {ServicesType} from "../../../../consts/types";
+import {Icon} from "../../../../components";
 
 import s from './index.module.scss'
 

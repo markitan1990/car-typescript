@@ -1,9 +1,11 @@
 import React from "react";
-import {CardType} from "../../../../consts/types";
-import {Image, Icon} from "../../../../components";
 import clsx from "clsx";
+import { Link } from 'react-router-dom';
+import {CardType} from "../../../../../consts/types";
+import {Icon, Image} from "../../../../../components";
 
 import s from "../index.module.scss";
+
 
 interface CardCarProps {
     data: CardType
@@ -17,7 +19,7 @@ export function CardCar({data}: Readonly<CardCarProps>) {
     };
 
     return (
-        <a href="http://localhost:3000/" className={s.card}>
+        <Link to={`/info/${carData.id}`} className={s.card}>
             <div className={s.car_img_card}>
                 <Image className={s.img}
                        src={`/img/${carData.images[0].link}`}
@@ -58,6 +60,6 @@ export function CardCar({data}: Readonly<CardCarProps>) {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }

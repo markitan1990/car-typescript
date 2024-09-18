@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import {CardsCars} from "./cards-cars";
-import {CarCardsType} from "../../../consts/types";
 import axios from "axios";
-import {testData} from "../../../consts";
 import { Element } from 'react-scroll'
+import {CarCardsType} from "../../../../consts/types";
+import {testData} from "../../../../consts";
 
 import s from "./index.module.scss"
 
-
 export function CarBox () {
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
+
 
     useEffect(() => {
         fetchData();

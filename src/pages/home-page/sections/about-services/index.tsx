@@ -1,7 +1,7 @@
 import React from "react";
-import {AboutServicesDataType} from "../../../consts/types";
-import {Button, Image} from "../../../components";
-import {aboutServicesData} from "../../../consts/consts";
+import {AboutServicesDataType} from "../../../../consts/types";
+import {Button, Image} from "../../../../components";
+import {aboutServicesData} from "../../../../consts/consts";
 
 import s from "./index.module.scss"
 

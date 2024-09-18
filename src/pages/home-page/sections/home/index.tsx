@@ -1,8 +1,9 @@
 import React from "react";
 import { Element } from "react-scroll";
-import {Button} from "../../../components";
+import {Button} from "../../../../components";
 
 import s from './index.module.scss'
+
 
 export function Home () {
     return (

@@ -1,7 +1,8 @@
-import { Icon, Image } from '../../../components'
-import { aboutUsText } from '../../../consts'
-import { AboutUsTextType } from '../../../consts/types'
 import { Element } from 'react-scroll'
+import {aboutUsText} from "../../../../consts";
+import {AboutUsTextType} from "../../../../consts/types";
+import React from "react";
+import {Icon, Image} from "../../../../components";
 
 import s from './index.module.scss'
 

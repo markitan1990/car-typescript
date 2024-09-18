@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, FeedbackForm, Icon} from "../../../components";
+import {Button, FeedbackForm, Icon} from "../../../../components";
 
 import s from "./index.module.scss";
 
