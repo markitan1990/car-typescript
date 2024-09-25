@@ -210,7 +210,7 @@ export const newTestData: NewTestDataType[] = [
         name: 'audiQ3',
         model: 'Q3 2.0T Prestige',
         car_mileage: 96300,
-        cost: 1231231,
+        cost: 29567,
         color: 'Синий',
         images: [
             {car_cards_id: 1, link: 'audiQ3_1.png'},
@@ -227,6 +227,7 @@ export const newTestData: NewTestDataType[] = [
         condition: 'Не требует ремонта',
         body: 'Внедорожник 5 дв.',
         description: 'Продается Citroen C5 Aircross в красивом белом перламутре. Машина пригнана с Германии. 2019 года выпуска, с пробегом 96 300 километров и 1 собственником в ПТС. Машина в богатой комплектации и с легендарным дизельным мотором с оригинальным пробегом по Европе. Уважаемые покупатели, в связи с отменой льготного утиль.сбора остается совсем не много времени купить хороший автомобиль за хорошие деньги. Указ подписан, а это значит что машины станут дороже на 900 000 рублей. Кто не в курсе, почитайте новости, к сожалению это так.',
+        shortDescription: 'The Audi Q3 subcompact crossover SUV debuted as a 2015 model, slotting below the compact Q5.',
     },
     {
         id: 2,
@@ -235,7 +236,7 @@ export const newTestData: NewTestDataType[] = [
         name: 'audiQ3',
         model: 'Q3 2.0T Prestige',
         car_mileage: 96300,
-        cost: 1231231,
+        cost: 29567,
         color: 'Синий',
         images: [
             {car_cards_id: 1, link: 'audiQ3_1.png'},
@@ -252,6 +253,7 @@ export const newTestData: NewTestDataType[] = [
         condition: 'Не требует ремонта',
         body: 'Внедорожник 5 дв.',
         description: 'Продается Citroen C5 Aircross в красивом белом перламутре. Машина пригнана с Германии. 2019 года выпуска, с пробегом 96 300 километров и 1 собственником в ПТС. Машина в богатой комплектации и с легендарным дизельным мотором с оригинальным пробегом по Европе. Уважаемые покупатели, в связи с отменой льготного утиль.сбора остается совсем не много времени купить хороший автомобиль за хорошие деньги. Указ подписан, а это значит что машины станут дороже на 900 000 рублей. Кто не в курсе, почитайте новости, к сожалению это так.',
+        shortDescription: 'The Audi Q3 subcompact crossover SUV debuted as a 2015 model, slotting below the compact Q5.',
     },
     {
         id: 3,
@@ -260,7 +262,7 @@ export const newTestData: NewTestDataType[] = [
         name: 'audiQ3',
         model: 'Q3 2.0T Prestige',
         car_mileage: 96300,
-        cost: 1231231,
+        cost: 29567,
         color: 'Синий',
         images: [
             {car_cards_id: 1, link: 'audiQ3_1.png'},
@@ -277,6 +279,7 @@ export const newTestData: NewTestDataType[] = [
         condition: 'Не требует ремонта',
         body: 'Внедорожник 5 дв.',
         description: 'Продается Citroen C5 Aircross в красивом белом перламутре. Машина пригнана с Германии. 2019 года выпуска, с пробегом 96 300 километров и 1 собственником в ПТС. Машина в богатой комплектации и с легендарным дизельным мотором с оригинальным пробегом по Европе. Уважаемые покупатели, в связи с отменой льготного утиль.сбора остается совсем не много времени купить хороший автомобиль за хорошие деньги. Указ подписан, а это значит что машины станут дороже на 900 000 рублей. Кто не в курсе, почитайте новости, к сожалению это так.',
+        shortDescription: 'The Audi Q3 subcompact crossover SUV debuted as a 2015 model, slotting below the compact Q5.',
     },
     {
         id: 4,
@@ -285,7 +288,7 @@ export const newTestData: NewTestDataType[] = [
         name: 'audiQ3',
         model: 'Q3 2.0T Prestige',
         car_mileage: 96300,
-        cost: 1231231,
+        cost: 29567,
         color: 'Синий',
         images: [
             {car_cards_id: 1, link: 'audiQ3_1.png'},
@@ -302,6 +305,7 @@ export const newTestData: NewTestDataType[] = [
         condition: 'Не требует ремонта',
         body: 'Внедорожник 5 дв.',
         description: 'Продается Citroen C5 Aircross в красивом белом перламутре. Машина пригнана с Германии. 2019 года выпуска, с пробегом 96 300 километров и 1 собственником в ПТС. Машина в богатой комплектации и с легендарным дизельным мотором с оригинальным пробегом по Европе. Уважаемые покупатели, в связи с отменой льготного утиль.сбора остается совсем не много времени купить хороший автомобиль за хорошие деньги. Указ подписан, а это значит что машины станут дороже на 900 000 рублей. Кто не в курсе, почитайте новости, к сожалению это так.',
+        shortDescription: 'The Audi Q3 subcompact crossover SUV debuted as a 2015 model, slotting below the compact Q5.',
     },
     {
         id: 5,
@@ -310,7 +314,7 @@ export const newTestData: NewTestDataType[] = [
         name: 'audiQ3',
         model: 'Q3 2.0T Prestige',
         car_mileage: 96300,
-        cost: 1231231,
+        cost: 29567,
         color: 'Синий',
         images: [
             {car_cards_id: 1, link: 'audiQ3_1.png'},
@@ -327,6 +331,7 @@ export const newTestData: NewTestDataType[] = [
         condition: 'Не требует ремонта',
         body: 'Внедорожник 5 дв.',
         description: 'Продается Citroen C5 Aircross в красивом белом перламутре. Машина пригнана с Германии. 2019 года выпуска, с пробегом 96 300 километров и 1 собственником в ПТС. Машина в богатой комплектации и с легендарным дизельным мотором с оригинальным пробегом по Европе. Уважаемые покупатели, в связи с отменой льготного утиль.сбора остается совсем не много времени купить хороший автомобиль за хорошие деньги. Указ подписан, а это значит что машины станут дороже на 900 000 рублей. Кто не в курсе, почитайте новости, к сожалению это так.',
+        shortDescription: 'The Audi Q3 subcompact crossover SUV debuted as a 2015 model, slotting below the compact Q5.',
     },
     {
         id: 6,
@@ -335,7 +340,7 @@ export const newTestData: NewTestDataType[] = [
         name: 'audiQ3',
         model: 'Q3 2.0T Prestige',
         car_mileage: 96300,
-        cost: 1231231,
+        cost: 29567,
         color: 'Синий',
         images: [
             {car_cards_id: 1, link: 'audiQ3_1.png'},
@@ -352,5 +357,6 @@ export const newTestData: NewTestDataType[] = [
         condition: 'Не требует ремонта',
         body: 'Внедорожник 5 дв.',
         description: 'Продается Citroen C5 Aircross в красивом белом перламутре. Машина пригнана с Германии. 2019 года выпуска, с пробегом 96 300 километров и 1 собственником в ПТС. Машина в богатой комплектации и с легендарным дизельным мотором с оригинальным пробегом по Европе. Уважаемые покупатели, в связи с отменой льготного утиль.сбора остается совсем не много времени купить хороший автомобиль за хорошие деньги. Указ подписан, а это значит что машины станут дороже на 900 000 рублей. Кто не в курсе, почитайте новости, к сожалению это так.',
+        shortDescription: 'The Audi Q3 subcompact crossover SUV debuted as a 2015 model, slotting below the compact Q5.',
     },
 ]

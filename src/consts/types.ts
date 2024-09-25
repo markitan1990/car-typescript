@@ -73,4 +73,5 @@ export interface NewTestDataType {
   condition: string
   body: string
   description: string
+  shortDescription: string
 }
