@@ -1,35 +1,32 @@
-import React, { useRef } from 'react';
-import { NewTestDataType } from "../../../consts/types";
-import { Image } from "../../../components";
+import React, {useRef} from 'react';
+import {NewTestDataType} from "../../../consts/types";
+import {Icon, Image} from "../../../components";
+import Slider from "react-slick";
 
 import s from "./index.module.scss";
-import Slider from "react-slick";
+import {clsx} from "clsx";
 
 interface PropsType {
     car: NewTestDataType
 }
 
-export function CarSlider({ car }: Readonly<PropsType>) {
-    const mainSliderRef = useRef<Slider>(null); // Реф для главного слайдера
+export function CarSlider({car}: Readonly<PropsType>) {
+    const mainSliderRef = useRef<Slider>(null);
 
-    // Настройки для основного слайдера
     const mainSliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true, // Отключаем стандартные стрелки
+        arrows: true,
         fade: false,
     };
 
-    // Обработчик клика по миниатюре
     const handleThumbnailClick = (index: number) => {
         if (mainSliderRef.current) {
             mainSliderRef.current.slickGoTo(index);
         }
     };
 
-    // Функции для переключения слайдов
     const nextSlide = () => {
-        console.log(mainSliderRef.current)
         if (mainSliderRef.current) {
             mainSliderRef.current.slickNext();
         }
@@ -44,34 +41,38 @@ export function CarSlider({ car }: Readonly<PropsType>) {
     return (
         <div className={s.carPage}>
             <Slider {...mainSliderSettings} ref={mainSliderRef}>
-                {car?.images?.map((image, index) => {
+                {car?.images?.map((image) => {
                     return (
-                        <div key={index}>
+                        <div key={image.car_cards_id}>
                             <Image
                                 className={s.img}
                                 src={`/img/car-data/${car?.name}/${image.link}`}
-                                alt={`photo-${index}`}
+                                alt={`photo-${image.car_cards_id}`}
                             />
                         </div>
                     );
                 })}
             </Slider>
             <div className={s.controls}>
-                <button onClick={prevSlide} className={s.arrow}>◀</button>
-                <button onClick={nextSlide} className={s.arrow}>▶</button>
+                <button onClick={prevSlide} className={clsx(s.arrow, s.arrow_left)}>
+                    <Icon iconId="arrow_left" viewBox={"0 0 9 17"} width={"9"} height={"17"}/>
+                </button>
+                <button onClick={nextSlide} className={clsx(s.arrow, s.arrow_right)}>
+                    <Icon iconId="arrow_right" viewBox={"0 0 9 17"} width={"9"} height={"17"}/>
+                </button>
             </div>
             <div className={s.thumbnails}>
                 {car?.images?.map((image, index) => {
                     const thumbSrc = `/img/car-data/${car?.name}/${image.link}`;
                     return (
-                        <img
-                            key={index}
-                            className={s.thumbnail}
-                            src={thumbSrc}
-                            alt={`thumbnail-${index}`}
-                            style={{ cursor: 'pointer' }}
-                            onClick={() => handleThumbnailClick(index)}
-                        />
+                        <div key={image.car_cards_id}>
+                            <Image
+                                className={s.thumbnail}
+                                src={thumbSrc}
+                                alt={`thumbnail-${index}`}
+                                onClick={() => handleThumbnailClick(index)}
+                            />
+                        </div>
                     );
                 })}
             </div>

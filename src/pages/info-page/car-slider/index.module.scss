@@ -1,55 +1,78 @@
 .carPage {
   padding-top: 100px;
   width: 823px;
-  height: 628px;
   overflow: hidden;
+  position: relative;
+
   .img {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
-  .slick-slider {
+  .thumbnails {
     display: flex;
     flex-direction: row;
-    width: 100%; /* Убедитесь, что слайдер занимает всю ширину контейнера */
-
+    width: 100%;
   }
 
   .thumbnail {
-    width: 100px;
-    height: 70px;
+    cursor: pointer;
+    width: 155px;
+    height: 112px;
     object-fit: cover;
     margin: 5px;
     border: 2px solid transparent;
     transition: border 0.3s;
 
     &:hover {
-      border: 2px solid #000;
+      border: 2px solid var(--primary-200);
     }
   }
 
-
-
-
-
-  // Стили для контейнера кнопок
   .controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: center;
-    margin: 10px 0;
+    justify-content: space-between;
+    padding: 0 19px;
+    width: 100%;
+    transform: translateY(-50%);
 
-    // Отдельные стили для кнопок
     .arrow {
-      background-color: transparent;
-      border: none;
-      font-size: 24px; // Размер стрелок
       cursor: pointer;
-      margin: 0 10px;
-      padding: 5px; // Паддинг для кнопок
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-color: #E9F1FD;
       transition: color 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        stroke: #6F7FA8;
+      }
 
       &:hover {
-        color: #007BFF; // Цвет при наведении
+        background-color: var(--primary-200);
+
+        svg {
+          stroke: #E9F1FD;
+        }
+      }
+    }
+
+    .arrow_left {
+      svg {
+        transform: translateX(-1px);
+      }
+    }
+
+    .arrow_right {
+      svg {
+        transform: translateX(1px);
       }
     }
   }

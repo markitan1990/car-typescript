@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {Link as ScrollLink, scroller} from 'react-scroll'; // Переименуем Link из react-scroll
-import {Link as RouterLink, useLocation} from 'react-router-dom'; // Переименуем Link из react-router-dom
+import {Link as ScrollLink, scroller} from 'react-scroll';
+import {Link as RouterLink, useLocation} from 'react-router-dom';
 import s from './../index.module.scss';
 
 interface ButtonFlipProps {
@@ -14,10 +14,8 @@ export function ButtonFlip({value, path, onClick}: Readonly<ButtonFlipProps>) {
 
     useEffect(() => {
         if (location.hash) {
-            // Извлекаем id секции из хеша URL
             const sectionId = location.hash.replace('#', '');
 
-            // Используем scroller для плавного скроллинга к нужной секции
             scroller.scrollTo(sectionId, {
                 smooth: true,
                 offset: -80,
@@ -26,7 +24,6 @@ export function ButtonFlip({value, path, onClick}: Readonly<ButtonFlipProps>) {
         }
     }, [location.hash]);
 
-    // Если находимся на странице "Home", использовать ScrollLink, иначе RouterLink
     const isHomePage = location.pathname === '/home';
 
     return isHomePage ? (
@@ -44,7 +41,7 @@ export function ButtonFlip({value, path, onClick}: Readonly<ButtonFlipProps>) {
     ) : (
         <RouterLink
             className={s.btn_flip}
-            to={`/home#${path}`} // Переходим на страницу info с hash для якорного скроллинга
+            to={`/home#${path}`}
             onClick={onClick}
         >
             {value}
