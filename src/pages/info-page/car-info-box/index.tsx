@@ -1,6 +1,6 @@
 import {NewTestDataType} from "../../../consts/types";
 import React from "react";
-import {Button} from "../../../components";
+import {Button, Icon} from "../../../components";
 
 import s from "./index.module.scss";
 
@@ -16,11 +16,14 @@ export function CarInfoBox({car}: Readonly<PropsType>) {
             <div className={s.car_info_box_text}>
                 <h3>{car.car_year + " " + car.brand + " " + car.model}</h3>
                 <h5>{car.shortDescription}</h5>
-                <h3>{formattedNumber}</h3>
+                <h3 className={s.cost}>{formattedNumber}</h3>
             </div>
-            <Button value={'Подробнее в отчете'} variant={'primary2'}></Button>
+            <button className={s.car_info_box_btn}>
+                <Icon iconId="question" viewBox={"0 0 17 17"} width={"17"} height={"17"}/>
+                Подробнее в отчете
+            </button>
             <div className={s.table}>
-            <h3>Описание</h3>
+                <h3>Описание</h3>
                 <div></div>
                 <table>
                     <tbody>
