@@ -1,7 +1,7 @@
 import {
     AboutServicesDataType,
     AboutUsTextType,
-    CarCardsType,
+    CarCardsType, CarServicesDataType,
     InfoDataType,
     NewTestDataType,
     ServicesType
@@ -359,4 +359,44 @@ export const newTestData: NewTestDataType[] = [
         description: 'Продается Citroen C5 Aircross в красивом белом перламутре. Машина пригнана с Германии. 2019 года выпуска, с пробегом 96 300 километров и 1 собственником в ПТС. Машина в богатой комплектации и с легендарным дизельным мотором с оригинальным пробегом по Европе. Уважаемые покупатели, в связи с отменой льготного утиль.сбора остается совсем не много времени купить хороший автомобиль за хорошие деньги. Указ подписан, а это значит что машины станут дороже на 900 000 рублей. Кто не в курсе, почитайте новости, к сожалению это так.',
         shortDescription: 'The Audi Q3 subcompact crossover SUV debuted as a 2015 model, slotting below the compact Q5.',
     },
+]
+
+
+export const carServicesData: CarServicesDataType [] = [
+    {
+        id: 1,
+        iconId: 'car_incident',
+        value: 'Проверка на ДТП',
+        description: 'ДТП не найдены',
+    },
+    {
+        id: 2,
+        iconId: 'car_legal_check',
+        value: 'Юридическая проверка',
+        description: 'Можно регистрировать, не в розыске',
+    },
+    {
+        id: 3,
+        iconId: 'car_check',
+        value: 'Техосмотры',
+        description: 'Покажем ТО с описанием работ',
+    },
+    {
+        id: 4,
+        iconId: 'car_auction',
+        value: 'Участие в зарубежных аукционах',
+        description: 'Проверим, участвовал ли автомобиль в зарубежных аукционах битых автомобилей',
+    },
+    {
+        id: 5,
+        iconId: 'car_mileage',
+        value: 'История пробега',
+        description: 'Покажем историю пробегов автомобиля',
+    },
+    {
+        id: 6,
+        iconId: 'car_repair',
+        value: 'Расчет стоимости ремонта',
+        description: 'Проверим наличие расчетов стоимости ремонта',
+    }
 ]

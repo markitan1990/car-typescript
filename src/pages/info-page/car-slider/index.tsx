@@ -5,6 +5,7 @@ import Slider from "react-slick";
 
 import s from "./index.module.scss";
 import {clsx} from "clsx";
+import {CarServices} from "../car-services";
 
 interface PropsType {
     car: NewTestDataType
@@ -76,6 +77,7 @@ export function CarSlider({car}: Readonly<PropsType>) {
                     );
                 })}
             </div>
+            <CarServices/>
         </div>
     );
 }

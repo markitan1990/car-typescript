@@ -75,3 +75,10 @@ export interface NewTestDataType {
   description: string
   shortDescription: string
 }
+
+export interface CarServicesDataType {
+  id: number
+  iconId: string
+  value: string
+  description: string
+}

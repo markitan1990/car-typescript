@@ -1,0 +1,32 @@
+.car_services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 751px;
+  row-gap: 6px;
+  margin-top: 64px;
+}
+
+.car_service {
+  display: flex;
+  flex-direction: row;
+  width: 340px;
+  //height: 37px;
+}
+
+.car_service_text {
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #363636;
+  }
+
+  h5 {
+    font-weight: 400;
+    font-size: 12px;
+    color: #949494;
+    text-wrap: wrap;
+  }
+}

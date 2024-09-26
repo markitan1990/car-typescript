@@ -1,5 +1,5 @@
 .carPage {
-  width: 823px;
+  max-width: 823px;
   overflow: hidden;
   position: relative;
 
@@ -11,15 +11,16 @@
   .thumbnails {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
     width: 100%;
   }
 
   .thumbnail {
     cursor: pointer;
-    width: 155px;
-    height: 112px;
+    width: 151px;
+    height: 108px;
     object-fit: cover;
-    margin: 5px;
     border: 2px solid transparent;
     transition: border 0.3s;
 
