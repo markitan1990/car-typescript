@@ -1,3 +1,7 @@
+.container {
+ padding: 0 20px;
+}
+
 .info_page_wrapper {
   display: flex;
   flex-direction: column;
@@ -53,8 +57,28 @@
     max-width: 979px;
     font-size: 18px;
     font-weight: 400;
-    line-height: 27.2px;
+    line-height: 30.6px;
     text-align: start;
     color: #000000;
   }
+}
+
+.info_page_cars {
+  max-width: 1250px;
+  margin: 93px auto 65px auto;
+
+  h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-800);
+    letter-spacing: -1.28px;
+    text-align: start;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1264px) {
+    .info_page {
+      flex-direction: column;
+    }
 }

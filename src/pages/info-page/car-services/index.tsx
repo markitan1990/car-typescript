@@ -10,7 +10,7 @@ export function CarServices() {
         <div className={s.car_services}>
             {carServicesData.map((service) => (
                 <div key={service.id} className={s.car_service}>
-                    {/*<Icon iconId={service.iconId} viewBox={"0 0 16 16"} width={"16"} height={"16"}/>*/}
+                    <Icon iconId={service.icon.iconId} viewBox={service.icon.viewBox} width={service.icon.width} height={service.icon.height} className={s.car_services_icon}/>
                     <div className={s.car_service_text}>
                         <h3>{service.value}</h3>
                         <h5>{service.description}</h5>

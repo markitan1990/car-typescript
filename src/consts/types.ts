@@ -72,13 +72,19 @@ export interface NewTestDataType {
   custom: string
   condition: string
   body: string
-  description: string
+  description_1: string
+  description_2: string
   shortDescription: string
 }
 
 export interface CarServicesDataType {
   id: number
-  iconId: string
+  icon: {
+    iconId: string,
+    viewBox: string,
+    width: string,
+    height: string,
+  },
   value: string
   description: string
 }
