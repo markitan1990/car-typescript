@@ -3,15 +3,15 @@ import {newTestData, testData} from "../../consts";
 import React, {useEffect, useState} from "react";
 import {CarSlider} from "./car-slider";
 import {CarInfoBox} from "./car-info-box";
-import {CarBox} from "../home-page/sections";
-import {GoTopButton, Icon} from "../../components";
-
-import '../../styles/globalStyles.scss'
-import s from "./index.module.scss";
+import {GoTopButton} from "../../components";
 import {CarServices} from "./car-services";
 import {CardsCars} from "../home-page/sections/car-box/cards-cars";
 import {CarCardsType} from "../../consts/types";
 import axios from "axios";
+
+import '../../styles/globalStyles.scss'
+import s from "./index.module.scss";
+
 
 export function InfoPage() {
     const {id} = useParams();
