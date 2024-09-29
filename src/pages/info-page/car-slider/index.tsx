@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {NewTestDataType} from "../../../consts/types";
 import {Icon, Image} from "../../../components";
 import Slider from "react-slick";
@@ -13,29 +13,36 @@ interface PropsType {
 
 export function CarSlider({car}: Readonly<PropsType>) {
     const mainSliderRef = useRef<Slider>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const mainSliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
-        fade: false,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        infinite: true,
+        speed: 1500,
+        pauseOnHover: true
     };
 
     const handleThumbnailClick = (index: number) => {
         if (mainSliderRef.current) {
-            mainSliderRef.current.slickGoTo(index);
+            mainSliderRef.current.slickGoTo(index)
         }
+        setActiveIndex(index)
     };
 
     const nextSlide = () => {
         if (mainSliderRef.current) {
-            mainSliderRef.current.slickNext();
+            mainSliderRef.current.slickNext()
         }
     };
 
     const prevSlide = () => {
         if (mainSliderRef.current) {
-            mainSliderRef.current.slickPrev();
+            mainSliderRef.current.slickPrev()
         }
     };
 
@@ -68,7 +75,7 @@ export function CarSlider({car}: Readonly<PropsType>) {
                     return (
                         <div key={image.car_cards_id}>
                             <Image
-                                className={s.thumbnail}
+                                className={clsx(s.thumbnail, activeIndex === index && s.active_thumbnail)}
                                 src={thumbSrc}
                                 alt={`thumbnail-${index}`}
                                 onClick={() => handleThumbnailClick(index)}

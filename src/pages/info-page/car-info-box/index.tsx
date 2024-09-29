@@ -9,7 +9,9 @@ interface PropsType {
 }
 
 export function CarInfoBox({car}: Readonly<PropsType>) {
-    const formattedNumber = car.cost.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+    const formattedNumber = car.cost
+        .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+        .replace('$', '$ ');
 
     return (
         <div className={s.car_info_box_wrapper}>
