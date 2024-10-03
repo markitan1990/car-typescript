@@ -54,3 +54,37 @@ export interface AboutServicesDataType {
   value: string
   description: string
 }
+
+export interface NewTestDataType {
+  id: number
+  car_year: number
+  brand: string
+  name: string
+  model: string
+  car_mileage: number
+  cost: number
+  color: string
+  images: ImgCarType[]
+  transmission: string
+  wheel_drive: string
+  engine: string
+  tax: string
+  custom: string
+  condition: string
+  body: string
+  description_1: string
+  description_2: string
+  shortDescription: string
+}
+
+export interface CarServicesDataType {
+  id: number
+  icon: {
+    iconId: string,
+    viewBox: string,
+    width: string,
+    height: string,
+  },
+  value: string
+  description: string
+}

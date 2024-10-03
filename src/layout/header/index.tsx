@@ -7,12 +7,16 @@ import {NavigateDesktop} from "./navigate/navigate-desktop";
 import clsx from "clsx";
 
 import s from './index.module.scss'
+import {useLocation} from "react-router-dom";
 
 export function Header() {
     const {width} = useWindowSize()
     const [scrolled, setScrolled] = useState(false)
     const [isFormModalOpen, setIsFormModalOpen] = useState(false)
     const [isNavModalOpen, setIsNavModalOpen] = useState(false)
+    const location = useLocation();
+
+    const isHomePage = location.pathname === '/home';
 
     const toggleScroll = useCallback(() => {
         setScrolled(window.scrollY > 80)
@@ -38,7 +42,7 @@ export function Header() {
     const isMobile = useMemo(() => width < 1200, [width])
 
     return (
-        <header className={clsx(s.header, scrolled && s.scrolled)}>
+        <header className={clsx(s.header, isHomePage ? scrolled && s.scrolled : s.scrolled)}>
             <Modal isOpen={isFormModalOpen} onClick={closeFormModal}>
                 <FeedbackForm
                     isOpen={isFormModalOpen}

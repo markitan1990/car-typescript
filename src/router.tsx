@@ -4,8 +4,8 @@ import {
     createBrowserRouter,
 } from 'react-router-dom'
 import {Layout} from "./layout/Layout";
-import {HomePage} from "./pages/HomePage";
-import {CarPage} from "./pages/CarPage";
+import {HomePage} from "./pages/home-page";
+import {InfoPage} from "./pages/info-page";
 
 
 export const router = createBrowserRouter([
@@ -22,8 +22,8 @@ export const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: 'cars',
-                element: <CarPage />,
+                path: 'info/:id',
+                element: <InfoPage />,
             },
             {
                 path: '*',
