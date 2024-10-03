@@ -1,90 +1,110 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  justify-content: center;
+  margin-top: 235px;
+  padding: 0 20px;
+}
+
+
 .report_box {
-  position: fixed;
-  top: 55%;
-  left: 50%;
-  right: 20px;
   width: calc(100% - 60px);
   height: calc(85% - 40px);
   max-width: 944px;
   max-height: 645px;
-  padding: 20px;
-  transform: translate(-50%, -50%);
   background: var(--light-100);
   box-shadow: 0 15px 25px #0000001A;
   border-radius: 25px;
   opacity: 0;
   pointer-events: none;
   overflow-y: auto;
+  margin-left: 29px;
 
   &.active {
     transition: 0.3s;
     transition-delay: 0.4s;
     opacity: 1;
-    top: 55%;
     z-index: 102;
-    margin-bottom: 0;
     pointer-events: all;
   }
+}
 
-  .cross {
-    position: absolute;
-    content: "";
-    cursor: pointer;
-    top: 20px;
-    right: 20px;
-    width: 37px;
-    height: 35px;
+.report_header {
+  width: 100%;
+  height: 165px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: red;
+  padding: 63px 83px 52px 83px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      rotate: 45deg;
-      width: 17px;
-      height: 2px;
-      top: 15px;
-      background-color: var(--light-100);
-    }
+  .report_block {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      rotate: -45deg;
-      width: 17px;
-      height: 2px;
-      top: 15px;
-      background-color: var(--light-100);
-    }
-
-    &:hover::before,
-    &:hover::after {
-      background-color: var(--dark-200);
+    svg {
+      fill: var(--primary-200);
     }
   }
 
-  .title_form {
-    font-size: 33px;
-    font-weight: 600;
-    line-height: 56.1px;
-    text-align: center;
+  .report_block_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
   }
 
-  .report_btn {
-    width: 100%;
-    max-width: 1248px;
-    height: 70px;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 30.6px;
-    background-color: #275CD4;
-    color: var(--light-100);
-    white-space: nowrap;
-    border-radius: 5px;
-    transition: background-color 0.4s ease-in-out;
-    cursor: pointer;
+  .report_block_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: end;
+  }
+}
 
-    &:hover {
-      background-color: #415FF3;
-    }
+
+.report_btn {
+  width: 100%;
+  max-width: 1248px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 30.6px;
+  background-color: #275CD4;
+  color: var(--light-100);
+  white-space: nowrap;
+  border-radius: 5px;
+  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #415FF3;
+  }
+}
+
+.cross {
+  fill: var(--light-100);
+  cursor: pointer;
+
+  &:hover {
+    fill: var(--primary-200);
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 582px) {
+  .wrapper {
+    margin-top: 100px;
+    padding: 0 10px;
   }
 }
