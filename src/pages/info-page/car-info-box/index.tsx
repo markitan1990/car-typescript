@@ -1,6 +1,6 @@
 import {NewTestDataType} from "../../../consts/types";
 import React from "react";
-import {Button, Icon} from "../../../components";
+import {Icon} from "../../../components";
 
 import s from "./index.module.scss";
 
