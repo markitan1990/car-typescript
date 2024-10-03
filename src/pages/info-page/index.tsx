@@ -17,7 +17,7 @@ import {ReportForm} from "../../components/report-form";
 export function InfoPage() {
     const {id} = useParams();
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
-    const [isModalOpen, setModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         fetchData();
@@ -49,7 +49,7 @@ export function InfoPage() {
                             <CarInfoBox car={car}/>
                         </div>
                         <CarServices/>
-                        <button className={s.info_page_btn} onClick={() => setModalOpen(true)}>Купить отчет от 78 ₽
+                        <button className={s.info_page_btn} onClick={() => setIsModalOpen(true)}>Купить отчет от 78 ₽
                         </button>
                         <div className={s.info_page_description}>
                             <h3>Комментарий продавца</h3>
@@ -64,8 +64,8 @@ export function InfoPage() {
                 </div>
             </div>
             <GoTopButton/>
-            <Modal isOpen={isModalOpen} onClick={() => setModalOpen(false)} className={s.modal}>
-                <ReportForm isOpen={isModalOpen}/>
+            <Modal isOpen={isModalOpen} onClick={() => setIsModalOpen(false)} className={s.modal}>
+                <ReportForm isOpen={isModalOpen} closeFormModal={() => setIsModalOpen(false)}/>
             </Modal>
         </>
     );
