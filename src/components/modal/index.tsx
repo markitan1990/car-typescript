@@ -7,11 +7,12 @@ interface ModalProps {
     children: ReactNode;
     isOpen: boolean;
     onClick?: () => void;
+    className?: string;
 }
 
-export function Modal ({children, isOpen, onClick}: Readonly<ModalProps>) {
+export function Modal ({children, isOpen, onClick, className}: Readonly<ModalProps>) {
     return (
-        <button className={clsx(s.modal, isOpen && s.active)} onClick={onClick}>
+        <button className={clsx(s.modal, className, isOpen && s.active)} onClick={onClick}>
         {children}
         </button>
 );
