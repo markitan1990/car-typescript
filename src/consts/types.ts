@@ -88,3 +88,15 @@ export interface CarServicesDataType {
   value: string
   description: string
 }
+
+export interface ReportDataType {
+  id: number
+  icon: {
+    iconId: string,
+    viewBox: string,
+    width: string,
+    height: string,
+  },
+  value: string
+  description?: string
+}

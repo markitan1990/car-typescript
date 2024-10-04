@@ -3,7 +3,7 @@ import {
     AboutUsTextType,
     CarCardsType, CarServicesDataType,
     InfoDataType,
-    NewTestDataType,
+    NewTestDataType, ReportDataType,
     ServicesType
 } from './types'
 import {z} from "zod";
@@ -434,5 +434,73 @@ export const carServicesData: CarServicesDataType [] = [
         },
         value: 'Расчет стоимости ремонта',
         description: 'Проверим наличие расчетов стоимости ремонта',
+    }
+]
+
+export const reportData: ReportDataType[] = [
+    {
+        id: 1,
+        icon: {
+            iconId: 'commercial',
+            viewBox: '0 0 31 27',
+            width: '31',
+            height: '27',
+        },
+        value: 'Коммерческое использование',
+        description: 'Проверка на работу в такси и каршеринге',
+    },
+    {
+        id: 2,
+        icon: {
+            iconId: 'announcement',
+            viewBox: '0 0 32 30',
+            width: '32',
+            height: '30',
+        },
+        value: 'Объявления о продаже',
+        description: 'Прошлые объявления о продаже автомобиля',
+    },
+    {
+        id: 3,
+        icon: {
+            iconId: 'service_car',
+            viewBox: '0 0 27 29',
+            width: '27',
+            height: '29',
+        },
+        value: 'Визиты в автосервис',
+        description: 'Проверка на наличие ремонтных работ',
+    },
+    {
+        id: 4,
+        icon: {
+            iconId: 'fines',
+            viewBox: '0 0 24 30',
+            width: '24',
+            height: '30',
+        },
+        value: 'Штрафы',
+        description: 'Все штрафы, в том числе, неоплаченные',
+    },
+    {
+        id: 5,
+        icon: {
+            iconId: 'mileage_history',
+            viewBox: '0 0 25 29',
+            width: '25',
+            height: '29',
+        },
+        value: 'История пробега',
+        description: 'Покажем историю пробегов автомобиля',
+    },
+    {
+        id: 6,
+        icon: {
+            iconId: 'dots',
+            viewBox: '0 0 22 6',
+            width: '22',
+            height: '6',
+        },
+        value: 'И еще более 10 пунктов проверки',
     }
 ]
