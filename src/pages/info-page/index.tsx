@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom';
+import {useLocation, useParams} from 'react-router-dom';
 import {newTestData, testData} from "../../consts";
 import React, {useEffect, useState} from "react";
 import {CarSlider} from "./car-slider";
@@ -16,12 +16,17 @@ import {ReportForm} from "../../components/report-form";
 
 export function InfoPage() {
     const {id} = useParams();
+    const location = useLocation();
     const [data, setData] = useState<CarCardsType[] | undefined>(undefined);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
         fetchData();
-    }, []);
+    }, [location.pathname]);
 
     async function fetchData() {
         try {
