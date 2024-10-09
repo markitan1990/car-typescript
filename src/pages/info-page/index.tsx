@@ -3,7 +3,7 @@ import {newTestData, testData} from "../../consts";
 import React, {useEffect, useState} from "react";
 import {CarSlider} from "./car-slider";
 import {CarInfoBox} from "./car-info-box";
-import {GoTopButton, Modal} from "../../components";
+import {Modal} from "../../components";
 import {CarServices} from "./car-services";
 import {CardsCars} from "../home-page/sections/car-box/cards-cars";
 import {CarCardsType} from "../../consts/types";
@@ -68,7 +68,6 @@ export function InfoPage() {
                     <CardsCars data={data}/>
                 </div>
             </div>
-            <GoTopButton/>
             <Modal isOpen={isModalOpen} onClick={() => setIsModalOpen(false)} className={s.modal}>
                 <ReportForm isOpen={isModalOpen} closeFormModal={() => setIsModalOpen(false)}/>
             </Modal>

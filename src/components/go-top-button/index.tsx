@@ -5,6 +5,12 @@ import s from './index.module.scss'
 
 export function GoTopButton() {
     const [showBtn, setShowBtn] = useState(false)
+    const [bottom, setBottom] = useState(0)
+
+    const handleScroll = () => {
+        toggleVisibility()
+        avoidFooter()
+    };
 
     const toggleVisibility = () => {
         if (window.scrollY > 200) {
@@ -14,6 +20,22 @@ export function GoTopButton() {
         }
     };
 
+    const avoidFooter = () => {
+        const scrollHeight = document.documentElement.scrollHeight
+        const scrollY = window.scrollY
+        const clientHeight = document.documentElement.clientHeight
+        const marginBottom = 10
+        const footerHeight = 122
+
+        const fromBottomSide = scrollHeight - scrollY - clientHeight
+
+        if (fromBottomSide < footerHeight) {
+            setBottom(marginBottom + footerHeight - fromBottomSide)
+        } else {
+            setBottom(marginBottom)
+        }
+    }
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -22,10 +44,10 @@ export function GoTopButton() {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', toggleVisibility);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', toggleVisibility);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, [])
 
@@ -33,6 +55,7 @@ export function GoTopButton() {
         <>
             {showBtn && (
                 <button className={s.button}
+                        style={{bottom: bottom + 'px'}}
                         onClick={scrollToTop}
                 >
                     <Icon
