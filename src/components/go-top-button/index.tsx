@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {Icon} from "../icon";
 
 import s from './index.module.scss'
@@ -7,10 +7,10 @@ export function GoTopButton() {
     const [showBtn, setShowBtn] = useState(false)
     const [bottom, setBottom] = useState(0)
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         toggleVisibility()
         avoidFooter()
-    };
+    }, [])
 
     const toggleVisibility = () => {
         if (window.scrollY > 200) {
@@ -49,7 +49,7 @@ export function GoTopButton() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [])
+    }, [handleScroll])
 
     return (
         <>
