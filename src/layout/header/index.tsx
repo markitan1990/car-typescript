@@ -54,10 +54,11 @@ export function Header() {
                 <div className={s.logo_nav}>
                     <Logo/>
                     <BurgerMenu isNavModalOpen={isNavModalOpen} onClick={openNavModal}/>
-                    <Modal isOpen={isNavModalOpen} onClick={closeNavModal}>
-                        <NavigateMobile onClick={closeNavModal}/>
-                        <span className={s.line}></span>
-                        <ContactUs onClick={openFormModal} className={s.contact_us_mobile}/>
+                    <Modal isOpen={isNavModalOpen} onClick={closeNavModal} className={s.modal_navigate}>
+                        <div className={s.modal_wrapper}>
+                            <NavigateMobile onClick={closeNavModal}/>
+                            <ContactUs onClick={openFormModal} className={s.contact_us_mobile}/>
+                        </div>
                     </Modal>
                 </div>
             ) : (
